@@ -2,6 +2,12 @@
 	// .index__promo
 	&__promo {
 	}
+	// .index__find
+	&__find {
+		position: relative;
+		z-index: 20;
+		margin-top: percent(-280, 1440);
+	}
 }
 
 //========================================================================================================================================================
@@ -229,6 +235,99 @@
 		color: $darkColor;
 		@media (max-width: toEm($mobileSmall)) {
 			font-size: 12px;
+		}
+	}
+}
+//========================================================================================================================================================
+.find {
+	// .find__container
+	&__container {
+	}
+	// .find__body
+	&__body {
+		position: relative;
+	}
+	// .find__form
+	&__form {
+	}
+	// .find__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 24px;
+		object-fit: cover;
+	}
+}
+.form-find {
+	position: relative;
+	z-index: 1;
+	padding: 24px;
+	display: grid;
+	gap: 24px;
+	color: #fff;
+	border-radius: 24px;
+	box-shadow: 0 8px 20px 0 $boxShadowColor;
+	@media (min-width: toEm($mobile)) and (max-width: toEm(1200)) {
+		grid-template-columns: repeat(3, minmax(auto, 1fr));
+	}
+	@media (min-width: toEm(1201)) {
+		grid-template-columns: repeat(3, minmax(auto, 1fr)) minmax(auto, 400px);
+	}
+	@media (max-width: toEm($mobile)) {
+		gap: 16px;
+	}
+	// .form-find__column
+	&__column {
+		> * {
+			margin-bottom: 4px;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	// .form-find__label
+	&__label {
+		font-weight: 500;
+		margin-bottom: 8px;
+	}
+	// .form-find__price
+	&__price {
+		font-family: $fontDela;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: $lightColor;
+	}
+	// .form-find__text
+	&__text {
+		font-weight: 500;
+	}
+	// .form-find__button
+	&__button {
+		border-radius: 16px;
+		padding: 26px 24px;
+		background-color: $mainColor;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: $lightColor;
+		font-family: $fontDela;
+		line-height: 1.1;
+		transition: background-color 0.3s;
+		html:not([data-fls-touch]) & {
+			@media (any-hover: hover), (pointer: fine) {
+				&:hover {
+					background-color: $mainColorHover;
+				}
+			}
+		}
+		@media (min-width: toEm($mobile)) and (max-width: toEm(1200)) {
+			grid-column: span 3;
+		}
+		@media (max-width: toEm($tablet)) {
+			padding-block: 24px;
+			font-size: 16px;
 		}
 	}
 }
