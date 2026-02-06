@@ -1,98 +1,82 @@
 .menu {
-	// .menu__icon
-	&__icon {
+	@media (max-width: toEm($tablet)) {
+		position: fixed;
+		width: 300px;
+		height: 100svh;
+		right: -100%;
+		top: 0;
+		overflow: auto;
+		padding: 85px 15px 30px 15px;
+		transition: right 0.3s;
+		background-color: $lightColor;
+		&::before {
+			content: "";
+			position: fixed;
+			width: 300px;
+			height: 70px;
+			right: -100%;
+			top: 0;
+			transition: right 0.3s;
+			z-index: 2;
+			background-color: $lightColor;
+		}
+		[data-fls-menu-open] & {
+			right: 0;
+			&::before {
+				right: 0;
+			}
+		}
 	}
+	@media (max-width: toEm($mobile)) {
+		width: 100%;
+		padding-top: 80px;
+		&::before {
+			width: 100%;
+		}
+	}
+
 	// .menu__body
 	&__body {
-		@media (max-width: toEm($mobile)) {
-			position: fixed;
-			width: 100%;
-			height: 100svh;
-			left: -100%;
-			top: 0;
-			overflow: auto;
-			padding: 50px 15px 30px 15px;
-			transition: left 0.3s;
-			&::before {
-				content: "";
-				position: fixed;
-				width: 100%;
-				height: 70px;
-				left: -100%;
-				top: 0;
-				transition: left 0.3s;
-				z-index: 2;
-			}
-			[data-fls-menu-open] & {
-				left: 0;
-				&::before {
-					left: 0;
-				}
+		@media (max-width: toEm($tablet)) {
+			text-align: right;
+			> *:not(:last-child) {
+				margin-bottom: 20px;
 			}
 		}
 	}
 	// .menu__list
 	&__list {
-		@media (max-width: toEm($mobile)) {
+		@include adaptiveValue("column-gap", 32, 15, 0, $containerWidth, 992);
+		@media (min-width: toEm($tablet)) {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			row-gap: 8px;
 		}
 	}
 	// .menu__item
 	&__item {
+		@media (max-width: toEm($tablet)) {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
 	}
 	// .menu__link
 	&__link {
-		@media (max-width: toEm($mobile)) {
-		}
-	}
-}
-
-//Burger Icon
-.icon-menu {
-	display: none;
-	@media (max-width: toEm($mobile)) {
-		display: block;
-		position: relative;
-		width: toRem(30);
-		height: toRem(18);
-		z-index: 5;
-		@media (any-hover: none) {
-			cursor: default;
-		}
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - 1px);
-		}
-		[data-fls-menu-open] & {
-			span {
-				width: 0;
+		color: $darkColor;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: text-decoration-color 0.3s;
+		html:not([data-fls-touch]) & {
+			@media (any-hover: hover), (pointer: fine) {
+				&:hover {
+					text-decoration-color: $darkColor;
+				}
 			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - 1px);
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - 1px);
-				transform: rotate(45deg);
-			}
+		}
+		@media (max-width: toEm($tablet)) {
+			font-size: 20px;
 		}
 	}
 }

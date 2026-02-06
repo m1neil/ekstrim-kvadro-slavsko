@@ -104,3 +104,43 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Загальні стилі для усього сайту
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.link {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 11px;
+	font-weight: 600;
+	color: $yellowColor;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: text-decoration-color 0.3s;
+	&::before {
+		content: "";
+		width: 18px;
+		flex-shrink: 0;
+		aspect-ratio: 1;
+		background: url("@img/icons/phone.svg") 0 0 no-repeat;
+	}
+	html:not([data-fls-touch]) & {
+		@media (any-hover: hover), (pointer: fine) {
+			&:hover {
+				text-decoration-color: $yellowColor;
+			}
+		}
+	}
+}
+
+.button {
+	border-radius: 16px;
+	padding: 12px 24px;
+	background-color: $yellowColor;
+	font-weight: 600;
+	color: #fff;
+	transition: background-color 0.3s;
+	html:not([data-fls-touch]) & {
+		@media (any-hover: hover), (pointer: fine) {
+			&:hover {
+				background-color: $yellowColorHover;
+			}
+		}
+	}
+}
