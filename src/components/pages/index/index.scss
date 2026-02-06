@@ -1,2 +1,234 @@
 .index {
+	// .index__promo
+	&__promo {
+	}
+}
+
+//========================================================================================================================================================
+.promo {
+	position: relative;
+	// .promo__container
+	&__container {
+		z-index: 10;
+		position: relative;
+		@media (min-width: toEm($mobile)) {
+			display: flex;
+			padding-top: max(percent(128, 1440), 80px);
+			padding-bottom: percent(300, 1440);
+		}
+		@media (max-width: toEm($mobile)) {
+			padding-bottom: 40px;
+		}
+	}
+	// .promo__content
+	&__content {
+		@media (min-width: toEm($mobile)) {
+			flex-basis: 560px;
+			padding-top: percent(109, 1240);
+		}
+		@media (max-width: toEm($mobile)) {
+			padding-top: 90px;
+			margin-bottom: 48px;
+		}
+		@media (max-width: toEm(575)) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: toEm(400)) {
+			padding-top: 75px;
+		}
+	}
+	// .promo__title
+	&__title {
+		margin-bottom: toEm(20, 52);
+	}
+	// .promo__place
+	&__place {
+		margin-bottom: toEm(30, 32);
+	}
+	// .promo__advantages
+	&__advantages {
+	}
+	// .promo__picture
+	&__picture {
+		position: relative;
+		@media (min-width: toEm($mobile)) {
+			min-width: 520px;
+			flex-basis: 648px;
+		}
+		@media (max-width: toEm($mobile)) {
+			min-width: 459px;
+			padding-top: 70px;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			padding-top: 55px;
+			padding-top: 45px;
+		}
+	}
+	// .promo__img
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		aspect-ratio: 642 / 461;
+		position: relative;
+		z-index: 1;
+	}
+	// .promo__decor
+	&__decor {
+		display: none;
+		@media (min-width: toEm($mobile)) {
+			display: block;
+			position: absolute;
+			bottom: -7px;
+			left: percent(10, 648);
+			min-width: percent(1423, 648);
+		}
+	}
+	// .promo__detail
+	&__detail {
+		position: absolute;
+		top: percent(8, 465);
+		max-width: 246px;
+		@media (min-width: toEm($mobile)) {
+			left: percent(-90, 648);
+		}
+	}
+	// .promo__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.bg-promo {
+	// .bg-promo__layer
+	&__layer {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		// .bg-promo__layer--1
+		&--1 {
+			bottom: 0;
+			z-index: 3;
+			@media (max-width: toEm($mobile)) {
+				bottom: percent(100, 943);
+			}
+		}
+		// .bg-promo__layer--2
+		&--2 {
+			bottom: percent(190, 943);
+			z-index: 2;
+		}
+		// .bg-promo__layer--3
+		&--3 {
+			display: none;
+			@media (min-width: toEm($mobile)) {
+				display: block;
+				width: percent(167, $maxWidthContainer);
+				bottom: percent(390, 943);
+				left: 0;
+			}
+		}
+		// .bg-promo__layer--4
+		&--4 {
+			display: block;
+			width: percent(612, $maxWidthContainer);
+			bottom: percent(190, 943);
+			left: percent(375, 1440);
+			@media (max-width: toEm($mobile)) {
+				left: 0;
+				z-index: 2;
+				left: percent(-190, 1440);
+				bottom: percent(190, 943);
+				scale: -1 1;
+			}
+		}
+	}
+}
+
+.advantages {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(auto-fill, minmax(min(222px, 100%), 1fr));
+	@media (max-width: toEm($mobile)) {
+		grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+		gap: 12px;
+	}
+	// .advantages__item
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		@media (max-width: toEm($mobileSmall)) {
+			gap: 7px;
+		}
+	}
+	// .advantages__icon
+	&__icon {
+		width: 46px;
+		flex-shrink: 0;
+		aspect-ratio: 1;
+		background-color: $accentColor;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: percent(28, 46);
+		}
+		@media (max-width: toEm($mobile)) {
+			width: 32px;
+		}
+	}
+	// .advantages__label
+	&__label {
+		font-family: $fontDela;
+		line-height: 1.1;
+		text-transform: uppercase;
+		color: $darkColor;
+		@media (max-width: toEm($mobile)) {
+			font-size: 14px;
+			line-height: 1.4;
+		}
+	}
+}
+.detail {
+	border-radius: 24px 24px 0 24px;
+	padding: 16px;
+	background-color: $grayColor;
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+	@media (max-width: toEm($mobileSmall)) {
+		padding: 8px;
+	}
+	// .detail__icon
+	&__icon {
+		width: 46px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: $accentColor;
+		display: flex;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: percent(28, 46);
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			width: 32px;
+		}
+	}
+	// .detail__descr
+	&__descr {
+		font-weight: 600;
+		line-height: 1.3;
+		color: $darkColor;
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 12px;
+		}
+	}
 }

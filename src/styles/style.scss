@@ -15,6 +15,7 @@ body {
 	color: $mainColor;
 	font-family: $fontFamily;
 	font-size: #{$fontSize}px;
+	background-color: $lightColor;
 
 	// Скролл заблоковано
 	[data-fls-scrolllock] & {
@@ -116,8 +117,9 @@ body {
 	&::before {
 		content: "";
 		width: 18px;
-		flex-shrink: 0;
 		aspect-ratio: 1;
+		flex-shrink: 0;
+		object-fit: contain;
 		background: url("@img/icons/phone.svg") 0 0 no-repeat;
 	}
 	html:not([data-fls-touch]) & {
@@ -142,5 +144,23 @@ body {
 				background-color: $yellowColorHover;
 			}
 		}
+	}
+}
+
+.title {
+	line-height: 1.1;
+	text-transform: uppercase;
+	color: $accentColor;
+	font-family: $fontDela;
+	color: $accentColor;
+	@include adaptiveValue("font-size", 32, 20);
+	// .title--big
+	&--big {
+		@include adaptiveValue("font-size", 52, 30, 2, $containerWidth, 768);
+		@include adaptiveValue("font-size", 32, 26, 3, 768, 320);
+	}
+	// .title--c-dark
+	&--c-dark {
+		color: $darkColor;
 	}
 }

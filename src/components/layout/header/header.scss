@@ -4,6 +4,7 @@
 	left: 0;
 	width: 100%;
 	padding-block: 24px;
+	z-index: 50;
 	@media (max-width: toEm($tablet)) {
 		padding-block: 15px;
 	}
