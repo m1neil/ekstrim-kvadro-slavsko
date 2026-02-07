@@ -44,7 +44,7 @@
 	<div class="index__find find">
 		<div class="find__container">
 			<div class="find__body">
-				<form data-fls-dev action="#" class="find__form form-find">
+				<form data-fls-form="dev" action="#" class="find__form form-find">
 					<div class="form-find__column">
 						<label for="#" class="form-find__label">Оберіть складність</label>
 						<select name="form[]" data-fls-select data-fls-select-modif="form-find__select">
@@ -648,5 +648,68 @@
 				</article>
 			</div>
 		</div>
+	</section>
+	<section class="join">
+		<div class="join__container">
+			<div class="join__content">
+				<h2 class="join__title title title--left">Готові до заїзду?</h2>
+				<div class="join__text">Заповніть форму нижче, а ми зв’яжемось з вами найближчим часом для узгодження
+					деталей.</div>
+				<form class="join__form form" data-fls-form="dev" method="POST" action="#">
+					<div class="form__row">
+						<input data-fls-input required type="text" name="form[name]" data-fls-form-errtext="Обов'язкове поле!"
+							placeholder="Ім'я"
+							class="form__input input">
+					</div>
+					<div class="form__row">
+						<input data-fls-input data-fls-phone required type="text" name="form[phone]"
+							data-fls-form-errtext="Не вірно вказаний телефон!"
+							placeholder="Телефон"
+							class="form__input input">
+					</div>
+					<button type="submit" class="form__button button">Надіслати</button>
+				</form>
+			</div>
+			<div class="join__body">
+				<div class="join__line">
+					<div class="join__label">Контакти</div>
+					<ul class="join__contacts contacts">
+						<li class="contacts__item">
+							<a href="tel:+380980979501" class="contacts__link">
+								<img src="@img/icons/phone.svg" alt="icon phone" class="contacts__icon">
+								+38 (098) 097 9501
+							</a>
+						</li>
+						<li class="contacts__item">
+							<address class="contacts__link">
+								<img src="@img/icons/point.svg" alt="icon point" class="contacts__icon">
+								Славсько, Карпати
+							</address>
+						</li>
+					</ul>
+				</div>
+				<div class="join__line">
+					<div class="join__label">Соцмережі</div>
+					<ul class="join__socials socials">
+						<li class="socials__item">
+							<a href="#" class="socials__link">
+								<img src="@img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
+							</a>
+						</li>
+						<li class="socials__item">
+							<a href="#" class="socials__link">
+								<img src="@img/icons/social-viber.svg" alt="icon viber" class="socials__img">
+							</a>
+						</li>
+						<li class="socials__item">
+							<a href="#" class="socials__link">
+								<img src="@img/icons/social-telegram.svg" alt="icon telegram" class="socials__img">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<img src="@img/join/background.jpg" alt="background" aria-hidden="true" class="join__bg">
 	</section>
 </div>

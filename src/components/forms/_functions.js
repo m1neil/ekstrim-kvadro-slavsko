@@ -1,68 +1,91 @@
 // Підключення функціоналу "Чортоги Фрілансера"
-import { FLS } from "@js/common/functions.js"
+import { FLS } from '@js/common/functions.js'
+
+const regexPhoneNumber =
+	/^\+380(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/
 
 // Валідація форм
 export let formValidate = {
 	getErrors(form) {
-		FLS(`_FLS_FORM_VALIDATE`);
-		let error = 0;
-		let formRequiredItems = form.querySelectorAll('[required]');
+		FLS(`_FLS_FORM_VALIDATE`)
+		let error = 0
+		let formRequiredItems = form.querySelectorAll('[required]')
 		if (formRequiredItems.length) {
 			formRequiredItems.forEach(formRequiredItem => {
-				if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) {
-					error += this.validateInput(formRequiredItem);
+				if (
+					(formRequiredItem.offsetParent !== null ||
+						formRequiredItem.tagName === 'SELECT') &&
+					!formRequiredItem.disabled
+				) {
+					error += this.validateInput(formRequiredItem)
 				}
-			});
+			})
 		}
-		return error;
+		return error
 	},
 	validateInput(formRequiredItem) {
-		let error = 0;
-		if (formRequiredItem.type === "email") {
-			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+		let error = 0
+		if (formRequiredItem.type === 'email') {
+			formRequiredItem.value = formRequiredItem.value.replace(' ', '')
 			if (this.emailTest(formRequiredItem)) {
-				this.addError(formRequiredItem);
-				this.removeSuccess(formRequiredItem);
-				error++;
+				this.addError(formRequiredItem)
+				this.removeSuccess(formRequiredItem)
+				error++
 			} else {
-				this.removeError(formRequiredItem);
-				this.addSuccess(formRequiredItem);
+				this.removeError(formRequiredItem)
+				this.addSuccess(formRequiredItem)
 			}
-		} else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
-			this.addError(formRequiredItem);
-			this.removeSuccess(formRequiredItem);
-			error++;
+		} else if (
+			formRequiredItem.type === 'checkbox' &&
+			!formRequiredItem.checked
+		) {
+			this.addError(formRequiredItem)
+			this.removeSuccess(formRequiredItem)
+			error++
+		} else if (formRequiredItem.hasAttribute('data-fls-phone')) {
+			if (!regexPhoneNumber.test(formRequiredItem.value)) {
+				this.addError(formRequiredItem)
+				this.removeSuccess(formRequiredItem)
+				error++
+			}
 		} else {
 			if (!formRequiredItem.value.trim()) {
-				this.addError(formRequiredItem);
-				this.removeSuccess(formRequiredItem);
-				error++;
+				this.addError(formRequiredItem)
+				this.removeSuccess(formRequiredItem)
+				error++
 			} else {
-				this.removeError(formRequiredItem);
-				this.addSuccess(formRequiredItem);
+				this.removeError(formRequiredItem)
+				this.addSuccess(formRequiredItem)
 			}
 		}
-		return error;
+		return error
 	},
 	addError(formRequiredItem) {
-		formRequiredItem.classList.add('--form-error');
-		formRequiredItem.parentElement.classList.add('--form-error');
-		let inputError = formRequiredItem.parentElement.querySelector('[data-fls-form-error]');
-		if (inputError) formRequiredItem.parentElement.removeChild(inputError);
+		formRequiredItem.classList.add('--form-error')
+		formRequiredItem.parentElement.classList.add('--form-error')
+		let inputError = formRequiredItem.parentElement.querySelector(
+			'[data-fls-form-error]',
+		)
+		if (inputError) formRequiredItem.parentElement.removeChild(inputError)
 		if (formRequiredItem.dataset.flsFormErrtext) {
-			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div data-fls-form-error>${formRequiredItem.dataset.flsFormErrtext}</div>`);
+			formRequiredItem.parentElement.insertAdjacentHTML(
+				'beforeend',
+				`<div data-fls-form-error>${formRequiredItem.dataset.flsFormErrtext}</div>`,
+			)
 		}
 	},
 	removeError(formRequiredItem) {
-		formRequiredItem.classList.remove('--form-error');
-		formRequiredItem.parentElement.classList.remove('--form-error');
+		formRequiredItem.classList.remove('--form-error')
+		formRequiredItem.parentElement.classList.remove('--form-error')
 		if (formRequiredItem.parentElement.querySelector('[data-fls-form-error]')) {
-			formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('[data-fls-form-error]'));
+			formRequiredItem.parentElement.removeChild(
+				formRequiredItem.parentElement.querySelector('[data-fls-form-error]'),
+			)
 		}
 	},
 	addSuccess(formRequiredItem) {
-		formRequiredItem.classList.add('--form-success');
-		formRequiredItem.parentElement.classList.add('--form-success');
+		formRequiredItem.classList.add('--form-success')
+		formRequiredItem.parentElement.classList.add('--form-success')
 	},
 	removeSuccess(formRequiredItem) {
 		formRequiredItem.classList.remove('--form-success')
@@ -73,11 +96,11 @@ export let formValidate = {
 		formRequiredItem.parentElement.classList.remove('--form-focus')
 	},
 	formClean(form) {
-		form.reset();
+		form.reset()
 		setTimeout(() => {
 			let inputs = form.querySelectorAll('input,textarea')
 			for (let index = 0; index < inputs.length; index++) {
-				const el = inputs[index];
+				const el = inputs[index]
 				formValidate.removeFocus(el)
 				formValidate.removeSuccess(el)
 				formValidate.removeError(el)
@@ -99,6 +122,8 @@ export let formValidate = {
 		}, 0)
 	},
 	emailTest(formRequiredItem) {
-		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
-	}
+		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
+			formRequiredItem.value,
+		)
+	},
 }

@@ -1,0 +1,28 @@
+.form {
+	display: grid;
+	gap: 32px 20px;
+	@media (min-width: toEm($mobileSmall)) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: toEm($mobile)) {
+		row-gap: 24px;
+	}
+	// .form__input
+	&__input {
+		// color: #fff;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	// .form__button
+	&__button {
+		width: 100%;
+		@media (min-width: toEm($mobileSmall)) {
+			grid-column: span 2;
+		}
+	}
+	[data-fls-form-error] {
+		font-weight: 500;
+		color: red;
+	}
+}

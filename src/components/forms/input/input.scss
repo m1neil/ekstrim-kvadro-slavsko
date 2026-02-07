@@ -9,13 +9,21 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
 	width: 100%;
+	height: 29px;
 	display: block;
-	padding: 10px;
-	border: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	caret-color: inherit;
+	text-transform: uppercase;
+	font-family: $fontDela;
+	outline: none;
+	transition: border-color 0.3s;
+	color: $lightColor;
+	&::placeholder {
+		color: $lightColor;
+	}
 	&.--form-focus {
+		border-color: $accentColor;
 	}
 	&.--form-error {
 	}
