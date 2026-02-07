@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'path'
 const projectName = path.basename(path.resolve()).toLowerCase()
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -8,19 +8,19 @@ export default {
 	lang: 'ua', // Наразі тільки Українська
 	vscode: {
 		settings: true,
-		snippets: true
+		snippets: true,
 	},
 	devcomponents: {
 		enable: false,
-		filename: '_components.html'
+		filename: '_components.html',
 	},
 	newpage: {
 		copyfromindex: false,
-		usetemplate: 'main'
+		usetemplate: 'main',
 	},
 	git: {
 		repo: ``,
-		branch: `main`
+		branch: `main`,
 	},
 	navpanel: {
 		dev: true,
@@ -28,11 +28,11 @@ export default {
 		position: 'left',
 		color: '#ffffff',
 		background: 'rgba(51, 51, 51, 0.5)',
-		transition: '300'
+		transition: '300',
 	},
 	statistics: {
 		enable: false,
-		showonbuild: false
+		showonbuild: false,
 	},
 	server: {
 		path: './',
@@ -41,13 +41,13 @@ export default {
 		copyfiles: true,
 		version: true,
 		hostname: 'localhost',
-		port: '1111'
+		port: '1111',
 	},
 	html: {
 		beautify: {
 			enable: true,
-			indent: "tab"
-		}
+			indent: 'tab',
+		},
 	},
 	styles: {
 		tailwindcss: false,
@@ -57,8 +57,8 @@ export default {
 		devfiles: true,
 	},
 	fonts: {
-		iconsfont: false,
-		download: false
+		iconsfont: true,
+		download: false,
 	},
 	images: {
 		svgsprite: false,
@@ -72,15 +72,15 @@ export default {
 				enable: true,
 				type: 'webp', // webp/avif
 				only: true,
-				quality: 80
+				quality: 80,
 			},
 			jpeg: {
-				quality: 80
+				quality: 80,
 			},
 			png: {
-				quality: 80
-			}
-		}
+				quality: 80,
+			},
+		},
 	},
 	js: {
 		hotmodules: true,
@@ -92,11 +92,11 @@ export default {
 			enable: false,
 		},
 		react: false,
-		vue: false
+		vue: false,
 	},
 	php: {
 		enable: false,
-		base: "./src/php/",
+		base: './src/php/',
 		hostname: 'localhost',
 		port: '1110',
 		binary: 'C:\\php\\php.exe',
@@ -118,13 +118,13 @@ export default {
 		// Логи роботи модулів в консолі
 		console: {
 			enable: true,
-			removeonbuild: true
-		}
+			removeonbuild: true,
+		},
 	},
 	projectpage: {
 		enable: false,
 		projectname: '',
-		template: "src/projectpage/projectpage.html",
+		template: 'src/projectpage/projectpage.html',
 		outfilename: '',
 	},
 	aliases: {
@@ -136,19 +136,22 @@ export default {
 		'@styles': 'src/styles',
 		// Media & files
 		'@fonts': 'src/assets/fonts',
-		'@img': isWp && !isProduction ? 'src/wp-content/themes/fls-theme/assets/img' : 'src/assets/img',
+		'@img':
+			isWp && !isProduction
+				? 'src/wp-content/themes/fls-theme/assets/img'
+				: 'src/assets/img',
 		'@video': 'src/assets/video',
 		'@files': 'src/files',
 		// Other
-		'@pug': 'src/pug'
+		'@pug': 'src/pug',
 	},
 	coffee: {
 		enable: true,
 		text: `(!!)Досить працювати, зроби перерву ☕️`,
-		interval: 45
+		interval: 45,
 	},
 	novaposhta: {
 		enable: false,
-		key: ''
-	}
+		key: '',
+	},
 }

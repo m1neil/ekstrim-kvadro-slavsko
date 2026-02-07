@@ -13,6 +13,7 @@
 //========================================================================================================================================================
 .promo {
 	position: relative;
+	overflow: hidden;
 	// .promo__container
 	&__container {
 		z-index: 10;
@@ -20,7 +21,7 @@
 		@media (min-width: toEm($mobile)) {
 			display: flex;
 			padding-top: max(percent(128, 1440), 80px);
-			padding-bottom: percent(280, 1440);
+			padding-bottom: max(percent(280, 1440), 280px);
 		}
 		@media (max-width: toEm($mobile)) {
 			padding-bottom: 40px;
@@ -379,16 +380,17 @@
 		position: absolute;
 		width: 100%;
 		left: 0;
-		background: url("@img/decors/decor-light.svg") 0 100% no-repeat;
+		min-width: 1500px;
 	}
 	&::before {
 		top: 0;
 		height: 160px;
+		background: url("@img/decors/decor-light.svg") 0 100% / cover no-repeat;
 	}
 	&::after {
 		height: 170px;
 		bottom: 0;
-		background: url("@img/decors/decor-dark.svg") 0 0 no-repeat;
+		background: url("@img/decors/decor-dark.svg") 0 0 / cover no-repeat;
 	}
 	// .bottom-about__container
 	&__container {
@@ -652,5 +654,215 @@
 	&__text {
 		font-weight: 500;
 		line-height: 1.3;
+	}
+}
+//========================================================================================================================================================
+.routes {
+	position: relative;
+	background-color: $darkColor;
+	padding-block: 60px 70px;
+	&__top,
+	&__content,
+	&__block {
+		position: relative;
+		z-index: 1;
+	}
+	// .routes__content
+	&__content {
+		@include gridContainer(6);
+	}
+	// .routes__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+	&__top {
+		padding-bottom: 45px;
+		@media (max-width: toEm($mobile)) {
+			padding-bottom: 32px;
+		}
+	}
+	// .routes__subtitle
+	&__subtitle {
+		font-family: $fontDela;
+		line-height: 1.1;
+		text-transform: uppercase;
+		text-align: center;
+		color: $lightColor;
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 14px;
+			line-height: 1.4;
+		}
+	}
+	// .routes__slider
+	&__slider {
+	}
+	// .routes__wrapper
+	&__wrapper {
+	}
+	// .routes__slide
+	&__slide {
+	}
+	// .routes__block
+	&__block {
+		padding-top: 25px;
+		@include gridContainer();
+	}
+	// .routes__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 43px;
+		row-gap: 20px;
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column-reverse;
+		}
+		.swiper-scrollbar {
+			height: 6px;
+			background-color: #bcbcbc;
+			min-width: 0;
+			overflow: hidden;
+			@media (min-width: toEm($mobileSmall)) {
+				flex: 0 1 1145px;
+			}
+			@media (max-width: toEm($mobileSmall)) {
+				width: 100%;
+			}
+		}
+		.swiper-scrollbar-drag {
+			height: 100%;
+			background-color: $accentColor;
+		}
+	}
+	// .routes__buttons
+	&__buttons {
+		flex-shrink: 0;
+		display: flex;
+		column-gap: 20px;
+		@media (max-width: toEm($mobileSmall)) {
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+	// .routes__bg
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.card-route {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	color: #fff;
+	> * {
+		margin-bottom: 8px;
+	}
+	&__label,
+	&__title,
+	&__detail {
+		font-family: $fontDela;
+		text-transform: uppercase;
+	}
+	// .card-route__label
+	&__label {
+		line-height: 1.1;
+		text-transform: uppercase;
+		color: $lightColor;
+		margin-bottom: 8px;
+	}
+	// .card-route__title
+	&__title {
+		text-align: left;
+		&:has(+ .card-route__text) {
+			margin-bottom: 24px;
+		}
+	}
+	// .card-route__detail
+	&__detail {
+		line-height: 1.1;
+		color: $accentColor;
+		margin-bottom: 24px;
+	}
+	// .card-route__text
+	&__text {
+		margin-bottom: 22px;
+		line-height: 1.3;
+		flex-grow: 1;
+		p:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	// .card-route__img
+	&__img {
+		border-radius: 12px 12px 0 0;
+		aspect-ratio: 400 / 196;
+		overflow: hidden;
+		display: block;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: scale 0.6s;
+		}
+		html:not([data-fls-touch]) & {
+			@media (any-hover: hover), (pointer: fine) {
+				&:hover {
+					img {
+						scale: 1.03;
+					}
+				}
+			}
+		}
+	}
+	// .card-route__body
+	&__body {
+		background-color: $mainColor;
+		border-radius: 0 0 12px 12px;
+		padding: 16px;
+	}
+	// .card-route__list
+	&__list {
+	}
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+.list-route {
+	// .list-route__item
+	&__item {
+		display: flex;
+		align-items: center;
+		column-gap: 19px;
+		font-weight: 600;
+		line-height: 1.3;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 14px;
+		}
+	}
+	// .list-route__icon
+	&__icon {
+		flex-shrink: 0;
+		width: 26px;
+		aspect-ratio: 1;
+		object-fit: contain;
+	}
+	// .list-route__label
+	&__label {
+		flex-grow: 1;
+	}
+	// .list-route__value
+	&__value {
+		text-align: right;
 	}
 }

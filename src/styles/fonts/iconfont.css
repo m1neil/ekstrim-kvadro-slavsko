@@ -1,0 +1,11 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("D://projects/projects/w2026/ekstrim-kvadro-slavsko/src/assets/svgicons/preview/iconfont.woff2?c7c30f2aca54d3a404b96e50c5d8c246") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-arrow"]::before { 
+		content: "\f101"; 
+	} 

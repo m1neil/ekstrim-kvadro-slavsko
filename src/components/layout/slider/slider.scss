@@ -1,5 +1,5 @@
 .swiper {
-	overflow: hidden;
+	// overflow: hidden;
 }
 .swiper-initialized {
 	touch-action: pan-y;
@@ -35,4 +35,34 @@
 }
 .swiper-button-lock {
 	display: none !important;
+}
+
+.swiper-button {
+	width: 16px;
+	aspect-ratio: 1;
+	font-size: 16px;
+	color: $accentColor;
+	will-change: scale;
+	transition:
+		scale 0.3s,
+		color 0.3s;
+	&::before {
+		rotate: -90deg;
+	}
+	&-prev {
+		&::before {
+			rotate: 90deg;
+		}
+	}
+	&:disabled {
+		cursor: default;
+		color: #bcbcbc;
+	}
+	html:not([data-fls-touch]) & {
+		@media (any-hover: hover), (pointer: fine) {
+			&:hover:not(:disabled) {
+				scale: 1.2;
+			}
+		}
+	}
 }
