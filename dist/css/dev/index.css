@@ -1645,7 +1645,7 @@ body::after {
     left: 0;
   }
   .menu__body > *:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.875rem;
   }
   .menu__item:not(:last-child) {
     margin-bottom: 1.5625rem;
@@ -1793,7 +1793,7 @@ body::after {
   }
   .menu {
     width: 100%;
-    padding-top: 5.625rem;
+    padding-top: 6.875rem;
   }
   .menu::before {
     width: 100%;
