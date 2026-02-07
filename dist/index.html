@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1770444883878"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1770444883878">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1770444883878">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" class="header">
+				<div class="header__container">
+					<a href="#" class="header__logo">
+						<img src="./assets/img/logo.svg" alt="Logo Ekstrim Kvadro">
+					</a>
+					<div data-fls-menu="" class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#about" data-fls-scrollto-header="" data-fls-scrollto="#about" class="menu__link">Про нас</a>
+								</li>
+								<li class="menu__item">
+									<a href="#routes" data-fls-scrollto-header="" data-fls-scrollto="#routes" class="menu__link">Маршрути</a>
+								</li>
+								<li class="menu__item">
+									<a href="#driving" data-fls-scrollto-header="" data-fls-scrollto="#driving" class="menu__link">Як проходить заїзд?</a>
+								</li>
+								<li class="menu__item">
+									<a href="#prices" data-fls-scrollto-header="" data-fls-scrollto="#prices" class="menu__link">Ціни</a>
+								</li>
+								<li class="menu__item">
+									<a href="#reviews" data-fls-scrollto-header="" data-fls-scrollto="#reviews" class="menu__link">Відгуки</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+					<div class="header__actions">
+						<a data-fls-dynamic=".menu__body,600" href="tel:+380680000000" class="header__link link">+38 (068) 000 00 00</a>
+						<a data-fls-scrollto-header="" data-fls-scrollto=".join" data-fls-dynamic=".menu__body,400" href="#" class="header__button button">Забронювати заїзд</a>
+					</div>
+					<button data-burger="" type="button" class="header__icon icon-menu">
+						<span></span>
+					</button>
+				</div>
+			</header>
+			<main class="page">
+				<div data-fls-index="" class="index">
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="index__promo promo">
+						<div class="promo__container">
+							<div class="promo__content">
+								<h1 class="promo__title title title--left title--big title--c-dark">Прокат квадроциклів</h1>
+								<h4 class="promo__place title title--left">у славському</h4>
+								<div class="promo__advantages advantages">
+									<div class="advantages__item">
+										<div class="advantages__icon">
+											<img src="./assets/img/icons/vehicle.svg" alt="Image">
+										</div>
+										<div class="advantages__label">Досвідчені інструктори</div>
+									</div>
+									<div class="advantages__item">
+										<div class="advantages__icon">
+											<img src="./assets/img/icons/helmet.svg" alt="Image">
+										</div>
+										<div class="advantages__label">екіпірування надаємо</div>
+									</div>
+								</div>
+							</div>
+							<div class="promo__picture">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/promo/atv-600.webp" type="image/webp">
+									<img alt="image atv" class="promo__img" src="./assets/img/promo/atv.webp">
+								</picture>
+								<img src="./assets/img/promo/decor.svg" aria-hidden="true" alt="decor" class="promo__decor">
+								<div class="promo__detail detail">
+									<div class="detail__icon">
+										<img src="./assets/img/icons/atv.svg" alt="icon atv">
+									</div>
+									<div class="detail__descr">Детальніше про наші квадроцикли</div>
+								</div>
+							</div>
+						</div>
+						<div class="promo__bg bg-promo">
+							<img src="./assets/img/promo/background/layer-01.svg" aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--1">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/promo/background/layer-02-600.webp" type="image/webp">
+								<source media="(max-width: 1200px)" srcset="./assets/img/promo/background/layer-02-1200.webp" type="image/webp">
+								<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--2" src="./assets/img/promo/background/layer-02.webp">
+							</picture>
+							<picture>
+								<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--3" src="./assets/img/promo/background/layer-03.webp">
+							</picture>
+							<img src="./assets/img/promo/background/layer-04.svg" aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--4">
+						</div>
+					</section>
+					<div data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" id="prices" class="index__find find">
+						<div class="find__container">
+							<div class="find__body">
+								<form data-fls-form="dev" action="#" class="find__form form-find">
+									<div class="form-find__column">
+										<label for="#" class="form-find__label">Оберіть складність</label>
+										<select name="form[]" data-fls-select="" data-fls-select-modif="form-find__select">
+											<option value="1">Легка</option>
+											<option value="2" selected>Середня</option>
+											<option value="3">Важка</option>
+											<option value="4">Неможлива</option>
+										</select>
+									</div>
+									<div class="form-find__column">
+										<label for="#" class="form-find__label">Тривалість</label>
+										<select name="form[]" data-fls-select="" data-fls-select-modif="form-find__select">
+											<option value="1">Від 1 години</option>
+											<option value="2" selected>Від 2 годин</option>
+											<option value="3">Від 3 годин</option>
+											<option value="4">Від 4 годин</option>
+										</select>
+									</div>
+									<div class="form-find__column">
+										<label for="#" class="form-find__label">Ціна</label>
+										<div class="form-find__price">1500 грн</div>
+										<div class="form-find__text">за квадроцикл/година</div>
+									</div>
+									<button type="submit" class="form-find__button">Знайти варіанти</button>
+								</form>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/find-bg-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/find-bg-1200.webp" type="image/webp">
+									<img alt="background" aria-hidden="true" class="find__bg" src="./assets/img/find-bg.webp">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<section id="about" class="about">
+						<div data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="about__top top-about">
+							<div class="top-about__container">
+								<h3 class="top-about__title title">
+									<span>Ми надаємо прокат квадроциклів у Славському для всіх, хто хоче поєднати</span>
+									активний відпочинок, адреналін
+					та справжні
+					гірські краєвиди.
+								</h3>
+							</div>
+						</div>
+						<div class="about__bottom bottom-about">
+							<div data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="bottom-about__container">
+								<div class="bottom-about__content">
+									<div class="bottom-about__wrapper">
+										<h4 class="bottom-about__info">
+											Організовуємо катання на квадроциклах гірськими маршрутами, лісовими дорогами та полонинами, відкриваючи
+							унікальні
+							локації Карпат, куди не дістатися звичайним транспортом.
+										</h4>
+										<div class="bottom-about__text">
+											<p>
+												Наш сервіс підходить як для новачків без досвіду, так і для тих, хто вже має навички керування квадроциклом і
+								шукає більш складні маршрути.
+											</p>
+											<p>
+												Перед кожною поїздкою проводиться обов’язковий інструктаж з безпеки, підбирається маршрут відповідно до рівня
+								підготовки та погодних умов, а також надається захисне екіпірування. Квадроцикли регулярно проходять технічне
+								обслуговування, що гарантує комфортне та безпечне катання у будь-яку пору сезону.
+											</p>
+										</div>
+									</div>
+									<a href="#" class="bottom-about__button button">Забронювати заїзд</a>
+								</div>
+								<div class="bottom-about__befits befits">
+									<div class="befits__item">
+										<div class="befits__icon">
+											<img src="./assets/img/icons/finish-flag.svg" alt="icon finish flag">
+										</div>
+										<div class="befits__label">Без досвіду — навчимо</div>
+									</div>
+									<div class="befits__item">
+										<div class="befits__icon">
+											<img src="./assets/img/icons/vehicle.svg" alt="icon vehicle">
+										</div>
+										<div class="befits__label">Сучасні квадроцикли</div>
+									</div>
+									<div class="befits__item">
+										<div class="befits__icon">
+											<img src="./assets/img/icons/helmet.svg" alt="icon helmet">
+										</div>
+										<div class="befits__label">Безпечно та з інструктором</div>
+									</div>
+									<div class="befits__item">
+										<div class="befits__icon">
+											<img src="./assets/img/icons/calendar.svg" alt="icon calendar">
+										</div>
+										<div class="befits__label">Працюємо щодня</div>
+									</div>
+								</div>
+							</div>
+							<div class="bottom-about__bg">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/race-bg-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/race-bg-1200.webp" type="image/webp">
+									<img aria-hidden="true" alt="background" src="./assets/img/race-bg.webp">
+								</picture>
+							</div>
+						</div>
+					</section>
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" id="routes" class="routes">
+						<div class="routes__top">
+							<div class="toutes__container">
+								<h2 class="routes__title title">Маршрути для заїздів</h2>
+								<div class="routes__subtitle">Маршрут підбираємо індивідуально залежно від рівня та погоди.</div>
+							</div>
+						</div>
+						<div class="routes__content">
+							<div data-fls-slider="" class="routes__slider swiper">
+								<div class="routes__wrapper swiper-wrapper">
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 1</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__text">
+												<p>Гарний оглядовий маршрут для початківців, дві зупинки для фото.</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 3</div>
+											<h3 class="card-route__title title">Гора Захар Беркут</h3>
+											<div class="card-route__text">
+												<p>
+													Маршрут з однією зупинкою на горі для фото та є можливість скористатися розвагами на горі (покататися на конях,
+									тарзанка, піти поїсти або випити кави).
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="routes__slide swiper-slide">
+										<article class="card-route">
+											<div class="card-route__label">Маршрут 2</div>
+											<h3 class="card-route__title title">Гора Ільза</h3>
+											<div class="card-route__detail">+ лісовий маршрут</div>
+											<div class="card-route__text">
+												<p>
+													Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
+									гарними краєвидами та ще плюс одна зупинка для фото.
+												</p>
+											</div>
+											<div class="card-route__block">
+												<a href="#" class="card-route__img">
+													<picture>
+														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
+													</picture>
+												</a>
+												<div class="card-route__body">
+													<ul class="card-route__list list-route">
+														<li class="list-route__item">
+															<img src="./assets/img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+															<div class="list-route__label">Тривалість:</div>
+															<div class="list-route__value">1 година</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+															<div class="list-route__label">Складність:</div>
+															<div class="list-route__value">Легкий</div>
+														</li>
+														<li class="list-route__item">
+															<img src="./assets/img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+															<div class="list-route__label">Ціна:</div>
+															<div class="list-route__value">1500 грн</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="routes__block">
+							<div class="routes__actions">
+								<div class="swiper-scrollbar"></div>
+								<div class="routes__buttons">
+									<button type="button" class="swiper-button swiper-button-prev --icon-arrow"></button>
+									<button type="button" class="swiper-button swiper-button-next --icon-arrow"></button>
+								</div>
+							</div>
+						</div>
+						<picture>
+							<source media="(max-width: 600px)" srcset="./assets/img/decors/routes-decor-600.webp" type="image/webp">
+							<source media="(max-width: 1200px)" srcset="./assets/img/decors/routes-decor-1200.webp" type="image/webp">
+							<img aria-hidden="true" alt="background" class="routes__bg" src="./assets/img/decors/routes-decor.webp">
+						</picture>
+					</section>
+					<section id="driving" class="driving">
+						<div data-fls-watcher="" data-fls-watcher-margin="0.3" data-fls-watcher-once="" class="driving__container">
+							<h2 class="driving__title title">Як проходить заїзд</h2>
+							<div class="driving__items">
+								<div class="driving__item item-driving">
+									<div class="item-driving__icon">
+										<img src="./assets/img/icons/clock-filled.svg" alt="icon clock">
+									</div>
+									<h4 class="item-driving__title">Приїзд на локацію</h4>
+									<div class="item-driving__text">на попередньо обговорений час вчасно</div>
+								</div>
+								<div class="driving__item item-driving">
+									<div class="item-driving__icon">
+										<img src="./assets/img/icons/helmet.svg" alt="icon helmet">
+									</div>
+									<h4 class="item-driving__title">Підготовка до їзди</h4>
+									<div class="item-driving__text">вдягаємо захисні костюми та шоломи</div>
+								</div>
+								<div class="driving__item item-driving">
+									<div class="item-driving__icon">
+										<img src="./assets/img/icons/vehicle.svg" alt="icon vehicle">
+									</div>
+									<h4 class="item-driving__title">Інструктаж по їзді</h4>
+									<div class="item-driving__text">та використанню квадроцикла</div>
+								</div>
+								<div class="driving__item item-driving">
+									<div class="item-driving__icon">
+										<img src="./assets/img/icons/wallet-credit.svg" alt="icon wallet">
+									</div>
+									<h4 class="item-driving__title">Оплата</h4>
+									<div class="item-driving__text">за домовлений час прокату</div>
+								</div>
+								<div class="driving__item item-driving">
+									<div class="item-driving__icon">
+										<img src="./assets/img/icons/map.svg" alt="icon map">
+									</div>
+									<h4 class="item-driving__title">Виїзд з локації</h4>
+									<div class="item-driving__text">по домовленому маршруту</div>
+								</div>
+							</div>
+						</div>
+						<img src="./assets/img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="driving__decor">
+					</section>
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" id="reviews" class="reviews">
+						<div class="reviews__content">
+							<h2 class="reviews__title title">Відгуки</h2>
+							<div class="reviews__items">
+								<article class="reviews__item item-review">
+									<div class="item-review__img">
+										<picture>
+											<img alt="review" src="./assets/img/reviews/review-01.webp">
+										</picture>
+									</div>
+									<div class="item-review__body">
+										<h3 class="item-review__title">Каталися вперше — емоцій море.</h3>
+										<div class="item-review__text">
+											<p>
+												Інструктор все спокійно пояснив, маршрут цікавий, техніка в хорошому стані. Було безпечно і водночас драйвово.
+								Обов’язково приїдемо ще.
+											</p>
+										</div>
+									</div>
+								</article>
+								<article class="reviews__item item-review">
+									<div class="item-review__img">
+										<picture>
+											<img alt="review" src="./assets/img/reviews/review-02.webp">
+										</picture>
+									</div>
+									<div class="item-review__body">
+										<h3 class="item-review__title">Дуже сподобалась організація.</h3>
+										<div class="item-review__text">
+											<p>
+												Видно, що люди знають свою справу: екіпірування чисте, квадроцикли доглянуті, маршрут продуманий. Чудовий
+								варіант активного відпочинку на вихідні.
+											</p>
+										</div>
+									</div>
+								</article>
+								<article class="reviews__item item-review">
+									<div class="item-review__img">
+										<picture>
+											<img alt="review" src="./assets/img/reviews/review-03.webp">
+										</picture>
+									</div>
+									<div class="item-review__body">
+										<h3 class="item-review__title">Збирались друзями — всі залишилися задоволені.</h3>
+										<div class="item-review__text">
+											<p>
+												Є і швидкі ділянки, і місця, де можна спокійно насолодитися природою. Гарне співвідношення ціни та вражень.
+											</p>
+										</div>
+									</div>
+								</article>
+								<article class="reviews__item item-review">
+									<div class="item-review__img">
+										<picture>
+											<img alt="review" src="./assets/img/reviews/review-04.webp">
+										</picture>
+									</div>
+								</article>
+								<article class="reviews__item item-review">
+									<div class="item-review__img">
+										<picture>
+											<img alt="review" src="./assets/img/reviews/review-05.webp">
+										</picture>
+									</div>
+									<div class="item-review__body">
+										<h3 class="item-review__title">Збирались друзями — всі залишилися задоволені.</h3>
+										<div class="item-review__text">
+											<p>
+												Є і швидкі ділянки, і місця, де можна спокійно насолодитися природою. Гарне співвідношення ціни та вражень.
+											</p>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</section>
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="join">
+						<div class="join__container">
+							<div class="join__content">
+								<h2 class="join__title title title--left">Готові до заїзду?</h2>
+								<div class="join__text">
+									Заповніть форму нижче, а ми зв’яжемось з вами найближчим часом для узгодження
+					деталей.
+								</div>
+								<form class="join__form form" data-fls-form="dev" method="POST" action="#">
+									<div class="form__row">
+										<input data-fls-input="" required type="text" name="form[name]" data-fls-form-errtext="Обов'язкове поле!" placeholder="Ім'я" class="form__input input">
+									</div>
+									<div class="form__row">
+										<input data-fls-input="" data-fls-phone="" required type="text" name="form[phone]" data-fls-form-errtext="Не вірно вказаний телефон!" placeholder="Телефон" class="form__input input">
+									</div>
+									<button type="submit" class="form__button button">Надіслати</button>
+								</form>
+							</div>
+							<div class="join__body">
+								<div class="join__line">
+									<div class="join__label">Контакти</div>
+									<ul class="join__contacts contacts">
+										<li class="contacts__item">
+											<a href="tel:+380980979501" class="contacts__link">
+												<img src="./assets/img/icons/phone.svg" alt="icon phone" class="contacts__icon">
+												+38 (098) 097 9501
+											</a>
+										</li>
+										<li class="contacts__item">
+											<address class="contacts__link">
+												<img src="./assets/img/icons/point.svg" alt="icon point" class="contacts__icon">
+												Славсько, Карпати
+											</address>
+										</li>
+									</ul>
+								</div>
+								<div class="join__line">
+									<div class="join__label">Соцмережі</div>
+									<ul data-fls-socials="" class="join__socials socials">
+										<li class="socials__item">
+											<a href="#" class="socials__link">
+												<img src="./assets/img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
+											</a>
+										</li>
+										<li class="socials__item">
+											<a href="#" class="socials__link">
+												<img src="./assets/img/icons/social-viber.svg" alt="icon viber" class="socials__img">
+											</a>
+										</li>
+										<li class="socials__item">
+											<a href="#" class="socials__link">
+												<img src="./assets/img/icons/social-telegram.svg" alt="icon telegram" class="socials__img">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<picture>
+							<source media="(max-width: 600px)" srcset="./assets/img/join/background-600.webp" type="image/webp">
+							<source media="(max-width: 1200px)" srcset="./assets/img/join/background-1200.webp" type="image/webp">
+							<img alt="background" aria-hidden="true" class="join__bg" src="./assets/img/join/background.webp">
+						</picture>
+					</section>
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="questions">
+						<div class="questions__container">
+							<h2 class="questions__title title">Часті запитання</h2>
+							<div data-fls-spollers="" class="spollers">
+								<details data-fls-spollers-open="" class="spollers__item">
+									<summary class="spollers__title">
+										Чи потрібен досвід керування квадроциклом, щоб взяти участь
+						у
+						заїзді?
+									</summary>
+									<div class="spollers__body">
+										<div class="spollers__text">
+											<p>
+												Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Що входить у вартість прокату?</summary>
+									<div class="spollers__body">
+										<div class="spollers__text">
+											<p>
+												Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Чи можна кататися удвох на одному квадроциклі?</summary>
+									<div class="spollers__body">
+										<div class="spollers__text">
+											<p>
+												Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+											</p>
+										</div>
+									</div>
+								</details>
+							</div>
+						</div>
+						<img src="./assets/img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="questions__decor">
+					</section>
+					<section class="more">
+						<div class="more__container">
+							<h4 class="more__title">Прокат квадроциклів — активний відпочинок та яскраві враження.</h4>
+							<div class="more__text">
+								<p>
+									Прокат квадроциклів — це ідеальний спосіб урізноманітнити відпочинок, отримати заряд адреналіну та побачити природу
+					з нового ракурсу. Катання на квадроциклах підходить як для новачків, так і для тих, хто вже має досвід керування
+					мототехнікою. Перед стартом кожен учасник проходить обов’язковий інструктаж, що гарантує безпеку та комфорт під час
+					поїздки.
+								</p>
+								<p>
+									Ми пропонуємо сучасні та технічно справні квадроцикли, які регулярно проходять обслуговування. Маршрути підібрані
+					таким чином, щоб поєднувати драйв, мальовничі локації та різні рівні складності. У програмі катання можуть бути
+					лісові дороги, ґрунтові траси, підйоми, спуски та ділянки з бездоріжжям.
+								</p>
+								<p>
+									Катання на квадроциклах — чудовий варіант для відпочинку з друзями, сімейного дозвілля, корпоративних заходів або
+					подарунка на день народження. Ми надаємо захисне екіпірування та супровід досвідченого інструктора, який допомагає
+					на маршруті та стежить за дотриманням правил.
+								</p>
+								<p>
+									Обираючи наш прокат квадроциклів, ви отримуєте не просто техніку, а повноцінну пригоду з позитивними емоціями та
+					яскравими спогадами. Активний відпочинок на квадроциклах — це поєднання свободи руху, швидкості та близькості до
+					природи.
+								</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<img src="./assets/img/logo-light.svg" alt="logo ekstrim kvadro" class="footer__logo">
+					<div class="footer__menu">
+						<div class="footer__column">
+							<h5 class="footer__title">Ми знаходимось:</h5>
+							<address class="footer__text">Славсько, Карпати</address>
+						</div>
+						<div class="footer__column">
+							<h5 class="footer__title">Контакти:</h5>
+							<a href="tel:+380980979501" class="footer__text">+38 (098) 097 9501</a>
+							<div class="footer__text">Тарас</div>
+						</div>
+						<div class="footer__column">
+							<h5 class="footer__title">Ми у соцмережах:</h5>
+							<ul data-fls-socials="" class="footer__socials socials socials--small">
+								<li class="socials__item">
+									<a href="#" class="socials__link">
+										<img src="./assets/img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link">
+										<img src="./assets/img/icons/social-viber.svg" alt="icon viber" class="socials__img">
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link">
+										<img src="./assets/img/icons/social-telegram.svg" alt="icon telegram" class="socials__img">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__agency">Developed and maintained by vau.agency.</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

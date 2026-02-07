@@ -47,17 +47,51 @@
 	// .promo__title
 	&__title {
 		margin-bottom: toEm(20, 52);
+		translate: 0 18px;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				translate 0.3s,
+				opacity 0.3s;
+			translate: 0 0;
+			opacity: 1;
+		}
 	}
 	// .promo__place
 	&__place {
 		margin-bottom: toEm(30, 32);
+		translate: 0 18px;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				translate 0.3s 0.15s,
+				opacity 0.3s 0.15s;
+			translate: 0 0;
+			opacity: 1;
+		}
 	}
 	// .promo__advantages
 	&__advantages {
+		translate: 0 18px;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				translate 0.3s 0.3s,
+				opacity 0.3s 0.3s;
+			translate: 0 0;
+			opacity: 1;
+		}
 	}
 	// .promo__picture
 	&__picture {
 		position: relative;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				opacity 0.9s,
+				0.8s;
+			opacity: 1;
+		}
 		@media (min-width: toEm($mobile)) {
 			min-width: 520px;
 			flex-basis: 648px;
@@ -96,6 +130,17 @@
 		position: absolute;
 		top: percent(8, 465);
 		max-width: 246px;
+		opacity: 0;
+		scale: 0.5;
+		will-change: scale;
+		.--watcher-view & {
+			transition:
+				opacity 0.4s 0.55s,
+				scale 0.4s 0.5s;
+			transform-origin: bottom right;
+			scale: 1;
+			opacity: 1;
+		}
 		@media (min-width: toEm($mobile)) {
 			left: percent(-90, 648);
 		}
@@ -250,6 +295,15 @@
 	// .find__body
 	&__body {
 		position: relative;
+		opacity: 0;
+		translate: 0 25px;
+		.--watcher-view & {
+			transition:
+				opacity 0.5s 0.55s,
+				translate 0.5s 0.55s;
+			opacity: 1;
+			translate: 0 0;
+		}
 	}
 	// .find__form
 	&__form {
@@ -362,6 +416,17 @@
 	&__title {
 		max-width: 1030px;
 		margin-inline: auto;
+		translate: 0 45px;
+		opacity: 0;
+		position: relative;
+		z-index: 1;
+		.--watcher-view & {
+			transition:
+				opacity 0.4s,
+				translate 0.4s;
+			opacity: 1;
+			translate: 0 0;
+		}
 		span {
 			display: block;
 			color: $darkColor;
@@ -406,6 +471,15 @@
 	&__content {
 		position: relative;
 		z-index: 1;
+		opacity: 0;
+		translate: 0 25px;
+		.--watcher-view & {
+			transition:
+				opacity 0.6s,
+				translate 0.6s;
+			opacity: 1;
+			translate: 0 0;
+		}
 		@media (min-width: toEm($tablet)) {
 			flex-basis: 553px;
 		}
@@ -486,6 +560,18 @@
 	&__item {
 		text-align: center;
 		color: $lightColor;
+		opacity: 0;
+		.--watcher-view & {
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+					$startDelay: 0.3;
+					$delay: ($i - 1) * 0.1 + 0.3;
+					transition-delay: #{$delay}s;
+				}
+			}
+			transition: opacity 0.8s;
+			opacity: 1;
+		}
 	}
 	// .befits__icon
 	&__icon {
@@ -527,6 +613,15 @@
 	// .driving__title
 	&__title {
 		margin-bottom: toEm(46, 32);
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.4s,
+				translate 0.4s;
+			opacity: 1;
+			translate: 0 0;
+		}
 	}
 	// .driving__items
 	&__items {
@@ -540,7 +635,18 @@
 	// .driving__item
 	&__item {
 		position: relative;
-
+		opacity: 0;
+		.--watcher-view & {
+			opacity: 1;
+			transition: opacity 0.7s;
+			$startDelay: 0.25;
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					$delay: ($i - 1) * 0.15 + $startDelay;
+					transition-delay: #{$delay}s;
+				}
+			}
+		}
 		@media (min-width: toEm(576)) {
 			flex-basis: 230px;
 		}
@@ -682,6 +788,15 @@
 	}
 	&__top {
 		padding-bottom: 45px;
+		translate: 0 35px;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				translate 0.4s,
+				opacity 0.4s;
+			translate: 0 0;
+			opacity: 1;
+		}
 		@media (max-width: toEm($mobile)) {
 			padding-bottom: 32px;
 		}
@@ -700,6 +815,15 @@
 	}
 	// .routes__slider
 	&__slider {
+		translate: 0 55px;
+		opacity: 0;
+		.--watcher-view & {
+			transition:
+				opacity 0.7s 0.25s,
+				translate 0.7s 0.25s;
+			opacity: 1;
+			translate: 0 0;
+		}
 	}
 	// .routes__wrapper
 	&__wrapper {
@@ -719,6 +843,12 @@
 		justify-content: space-between;
 		column-gap: 43px;
 		row-gap: 20px;
+		opacity: 0;
+		.--watcher-view & {
+			opacity: 1;
+			transition: opacity 0.3s 0.8s;
+			opacity: 1;
+		}
 		@media (max-width: toEm($mobileSmall)) {
 			flex-direction: column-reverse;
 		}
@@ -879,6 +1009,15 @@
 	// .reviews__title
 	&__title {
 		margin-bottom: toEm(32, 32);
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.4s,
+				translate 0.4s;
+			opacity: 1;
+			translate: 0 0;
+		}
 	}
 	// .reviews__items
 	&__items {
@@ -886,6 +1025,15 @@
 		display: grid;
 		@media (min-width: toEm($tablet)) {
 			grid-template-columns: 0.79fr repeat(2, 0.21fr) 0.79fr;
+		}
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.7s 0.3s,
+				translate 0.7s 0.3s;
+			opacity: 1;
+			translate: 0 0;
 		}
 	}
 	// .reviews__item
@@ -1038,6 +1186,15 @@
 		> *:last-child {
 			margin-bottom: 0;
 		}
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.5s,
+				translate 0.5s;
+			opacity: 1;
+			translate: 0 0;
+		}
 		@media (min-width: toEm($mobile)) {
 			flex-basis: 610px;
 			min-width: 418px;
@@ -1053,6 +1210,15 @@
 		padding: 32px 24px;
 		border-radius: 16px;
 		color: $lightColor;
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.5s 0.25s,
+				translate 0.5s 0.25s;
+			opacity: 1;
+			translate: 0 0;
+		}
 		> *:not(:last-child) {
 			margin-bottom: 26px;
 			@media (max-width: toEm($mobileSmall)) {
@@ -1153,6 +1319,15 @@
 	// .questions__title
 	&__title {
 		margin-bottom: toEm(32, 32);
+		opacity: 0;
+		translate: 0 35px;
+		.--watcher-view & {
+			transition:
+				opacity 0.4s,
+				translate 0.4s;
+			opacity: 1;
+			translate: 0 0;
+		}
 	}
 	// .questions__decor
 	&__decor {

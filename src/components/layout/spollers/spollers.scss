@@ -21,6 +21,22 @@
 // Спойлер
 .spollers__item {
 	font-size: toRem(20);
+	opacity: 0;
+	translate: 0 35px;
+	.--watcher-view & {
+		transition:
+			opacity 0.4s,
+			translate 0.4s;
+		opacity: 1;
+		translate: 0 0;
+		$startDelay: 0.3;
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) {
+				$delay: ($i - 1) * 0.15 + $startDelay;
+				transition-delay: #{$delay}s;
+			}
+		}
+	}
 }
 // Заголовок спойлера
 .spollers__title {

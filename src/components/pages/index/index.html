@@ -1,5 +1,5 @@
 <div data-fls-index class="index">
-	<section data-fls-watcher data-fls-watcher-margin="0.3" class="index__promo promo">
+	<section data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="index__promo promo">
 		<div class="promo__container">
 			<div class="promo__content">
 				<h1 class="promo__title title title--left title--big title--c-dark">Прокат квадроциклів</h1>
@@ -41,7 +41,7 @@
 				class="bg-promo__layer bg-promo__layer--4">
 		</div>
 	</section>
-	<div id="prices" class="index__find find">
+	<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once id="prices" class="index__find find">
 		<div class="find__container">
 			<div class="find__body">
 				<form data-fls-form="dev" action="#" class="find__form form-find">
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<section id="about" class="about">
-		<div class="about__top top-about">
+		<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="about__top top-about">
 			<div class="top-about__container">
 				<h3 class="top-about__title title">
 					<span>Ми надаємо прокат квадроциклів у Славському для всіх, хто хоче поєднати</span> активний відпочинок, адреналін
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		<div class="about__bottom bottom-about">
-			<div class="bottom-about__container">
+			<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="bottom-about__container">
 				<div class="bottom-about__content">
 					<div class="bottom-about__wrapper">
 						<h4 class="bottom-about__info">
@@ -139,7 +139,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="routes" class="routes">
+	<section data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once id="routes" class="routes">
 		<div class="routes__top">
 			<div class="toutes__container">
 				<h2 class="routes__title title">Маршрути для заїздів</h2>
@@ -531,12 +531,12 @@
 		<img src="@img/decors/routes-decor.jpg" aria-hidden="true" alt="background" class="routes__bg">
 	</section>
 	<section id="driving" class="driving">
-		<div class="driving__container">
+		<div data-fls-watcher data-fls-watcher-margin="0.3" data-fls-watcher-once class="driving__container">
 			<h2 class="driving__title title">Як проходить заїзд</h2>
 			<div class="driving__items">
 				<div class="driving__item item-driving">
 					<div class="item-driving__icon">
-						<img src="@img/icons/clock-filled.svg" alt="icon">
+						<img src="@img/icons/clock-filled.svg" alt="icon clock">
 					</div>
 					<h4 class="item-driving__title">Приїзд на локацію</h4>
 					<div class="item-driving__text">
@@ -545,45 +545,45 @@
 				</div>
 				<div class="driving__item item-driving">
 					<div class="item-driving__icon">
-						<img src="@img/icons/clock-filled.svg" alt="icon">
+						<img src="@img/icons/helmet.svg" alt="icon helmet">
 					</div>
-					<h4 class="item-driving__title">Приїзд на локацію</h4>
+					<h4 class="item-driving__title">Підготовка до їзди</h4>
 					<div class="item-driving__text">
-						на попередньо обговорений час вчасно
+						вдягаємо захисні костюми та шоломи
 					</div>
 				</div>
 				<div class="driving__item item-driving">
 					<div class="item-driving__icon">
-						<img src="@img/icons/clock-filled.svg" alt="icon">
+						<img src="@img/icons/vehicle.svg" alt="icon vehicle">
 					</div>
-					<h4 class="item-driving__title">Приїзд на локацію</h4>
+					<h4 class="item-driving__title">Інструктаж по їзді</h4>
 					<div class="item-driving__text">
-						на попередньо обговорений час вчасно
+						та використанню квадроцикла
 					</div>
 				</div>
 				<div class="driving__item item-driving">
 					<div class="item-driving__icon">
-						<img src="@img/icons/clock-filled.svg" alt="icon">
+						<img src="@img/icons/wallet-credit.svg" alt="icon wallet">
 					</div>
-					<h4 class="item-driving__title">Приїзд на локацію</h4>
+					<h4 class="item-driving__title">Оплата</h4>
 					<div class="item-driving__text">
-						на попередньо обговорений час вчасно
+						за домовлений час прокату
 					</div>
 				</div>
 				<div class="driving__item item-driving">
 					<div class="item-driving__icon">
-						<img src="@img/icons/clock-filled.svg" alt="icon">
+						<img src="@img/icons/map.svg" alt="icon map">
 					</div>
-					<h4 class="item-driving__title">Приїзд на локацію</h4>
+					<h4 class="item-driving__title">Виїзд з локації</h4>
 					<div class="item-driving__text">
-						на попередньо обговорений час вчасно
+						по домовленому маршруту
 					</div>
 				</div>
 			</div>
 		</div>
 		<img src="@img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="driving__decor">
 	</section>
-	<section id="reviews" class="reviews">
+	<section data-fls-watcher data-fls-watcher-threshold="0.25" data-fls-watcher-once id="reviews" class="reviews">
 		<div class="reviews__content">
 			<h2 class="reviews__title title">Відгуки</h2>
 			<div class="reviews__items">
@@ -649,7 +649,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="join">
+	<section data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="join">
 		<div class="join__container">
 			<div class="join__content">
 				<h2 class="join__title title title--left">Готові до заїзду?</h2>
@@ -712,7 +712,7 @@
 		</div>
 		<img src="@img/join/background.jpg" alt="background" aria-hidden="true" class="join__bg">
 	</section>
-	<section class="questions">
+	<section data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="questions">
 		<div class="questions__container">
 			<h2 class="questions__title title">Часті запитання</h2>
 			<div data-fls-spollers class="spollers">

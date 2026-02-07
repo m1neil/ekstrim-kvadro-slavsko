@@ -7,8 +7,11 @@
 		top: 0;
 		overflow: auto;
 		padding: 85px 15px 30px 15px;
-		transition: right 0.3s;
+		transition:
+			right 0.3s,
+			opacity 0.3s;
 		background-color: $lightColor;
+		opacity: 0;
 		&::before {
 			content: "";
 			position: fixed;
@@ -22,6 +25,7 @@
 		}
 		[data-fls-menu-open] & {
 			right: 0;
+			opacity: 1;
 			&::before {
 				right: 0;
 			}
