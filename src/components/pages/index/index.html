@@ -41,7 +41,7 @@
 				class="bg-promo__layer bg-promo__layer--4">
 		</div>
 	</section>
-	<div class="index__find find">
+	<div id="prices" class="index__find find">
 		<div class="find__container">
 			<div class="find__body">
 				<form data-fls-form="dev" action="#" class="find__form form-find">
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="about">
+	<section id="about" class="about">
 		<div class="about__top top-about">
 			<div class="top-about__container">
 				<h3 class="top-about__title title">
@@ -139,7 +139,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="routes">
+	<section id="routes" class="routes">
 		<div class="routes__top">
 			<div class="toutes__container">
 				<h2 class="routes__title title">Маршрути для заїздів</h2>
@@ -530,7 +530,7 @@
 		</div>
 		<img src="@img/decors/routes-decor.jpg" aria-hidden="true" alt="background" class="routes__bg">
 	</section>
-	<section class="driving">
+	<section id="driving" class="driving">
 		<div class="driving__container">
 			<h2 class="driving__title title">Як проходить заїзд</h2>
 			<div class="driving__items">
@@ -583,7 +583,7 @@
 		</div>
 		<img src="@img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="driving__decor">
 	</section>
-	<section class="reviews">
+	<section id="reviews" class="reviews">
 		<div class="reviews__content">
 			<h2 class="reviews__title title">Відгуки</h2>
 			<div class="reviews__items">
@@ -690,7 +690,7 @@
 				</div>
 				<div class="join__line">
 					<div class="join__label">Соцмережі</div>
-					<ul class="join__socials socials">
+					<ul data-fls-socials class="join__socials socials">
 						<li class="socials__item">
 							<a href="#" class="socials__link">
 								<img src="@img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
@@ -711,5 +711,79 @@
 			</div>
 		</div>
 		<img src="@img/join/background.jpg" alt="background" aria-hidden="true" class="join__bg">
+	</section>
+	<section class="questions">
+		<div class="questions__container">
+			<h2 class="questions__title title">Часті запитання</h2>
+			<div data-fls-spollers class="spollers">
+				<details data-fls-spollers-open class="spollers__item">
+					<summary class="spollers__title">Чи потрібен досвід керування квадроциклом, щоб взяти участь
+						у
+						заїзді?</summary>
+					<div class="spollers__body">
+						<div class="spollers__text">
+							<p>
+								Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+							</p>
+						</div>
+					</div>
+				</details>
+				<details class="spollers__item">
+					<summary class="spollers__title">Що входить у вартість прокату?</summary>
+					<div class="spollers__body">
+						<div class="spollers__text">
+							<p>
+								Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+							</p>
+						</div>
+					</div>
+				</details>
+				<details class="spollers__item">
+					<summary class="spollers__title">Чи можна кататися удвох на одному квадроциклі?</summary>
+					<div class="spollers__body">
+						<div class="spollers__text">
+							<p>
+								Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
+								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
+								комфортним і безпечним навіть для новачків.
+							</p>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+		<img src="@img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="questions__decor">
+	</section>
+	<section class="more">
+		<div class="more__container">
+			<h4 class="more__title">Прокат квадроциклів — активний відпочинок та яскраві враження.</h4>
+			<div class="more__text">
+				<p>
+					Прокат квадроциклів — це ідеальний спосіб урізноманітнити відпочинок, отримати заряд адреналіну та побачити природу
+					з нового ракурсу. Катання на квадроциклах підходить як для новачків, так і для тих, хто вже має досвід керування
+					мототехнікою. Перед стартом кожен учасник проходить обов’язковий інструктаж, що гарантує безпеку та комфорт під час
+					поїздки.
+				</p>
+				<p>
+					Ми пропонуємо сучасні та технічно справні квадроцикли, які регулярно проходять обслуговування. Маршрути підібрані
+					таким чином, щоб поєднувати драйв, мальовничі локації та різні рівні складності. У програмі катання можуть бути
+					лісові дороги, ґрунтові траси, підйоми, спуски та ділянки з бездоріжжям.
+				</p>
+				<p>
+					Катання на квадроциклах — чудовий варіант для відпочинку з друзями, сімейного дозвілля, корпоративних заходів або
+					подарунка на день народження. Ми надаємо захисне екіпірування та супровід досвідченого інструктора, який допомагає
+					на маршруті та стежить за дотриманням правил.
+				</p>
+				<p>
+					Обираючи наш прокат квадроциклів, ви отримуєте не просто техніку, а повноцінну пригоду з позитивними емоціями та
+					яскравими спогадами. Активний відпочинок на квадроциклах — це поєднання свободи руху, швидкості та близькості до
+					природи.
+				</p>
+			</div>
+		</div>
 	</section>
 </div>

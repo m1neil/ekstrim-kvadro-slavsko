@@ -1,4 +1,4 @@
-<header data-fls-header class="header">
+<header data-fls-header data-fls-header-scroll class="header">
 	<div class="header__container">
 		<a href="#" class="header__logo">
 			<img src="@img/logo.svg" alt="Logo Ekstrim Kvadro">
@@ -6,7 +6,8 @@
 		<include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include>
 		<div class="header__actions">
 			<a data-fls-dynamic=".menu__body,600" href="tel:+380680000000" class="header__link link">+38 (068) 000 00 00</a>
-			<a data-fls-dynamic=".menu__body,400" href="#" class="header__button button">Забронювати заїзд</a>
+			<a data-fls-scrollto-header data-fls-scrollto=".join" data-fls-dynamic=".menu__body,400" href="#"
+				class="header__button button">Забронювати заїзд</a>
 		</div>
 		<button data-burger type="button" class="header__icon icon-menu"><span></span></button>
 	</div>
