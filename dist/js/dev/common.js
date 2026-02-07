@@ -176,12 +176,13 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 };
 export {
   slideToggle as a,
-  bodyLockToggle as b,
-  bodyLockStatus as c,
+  bodyLock as b,
+  bodyUnlock as c,
   dataMediaQueries as d,
-  bodyUnlock as e,
-  getHash as f,
+  bodyLockStatus as e,
+  bodyLockToggle as f,
   gotoBlock as g,
+  getHash as h,
   slideUp as s,
   uniqArray as u
 };

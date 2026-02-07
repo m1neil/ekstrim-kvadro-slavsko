@@ -5,15 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1770444883878"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1770444883878">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1770444883878">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1770452152975"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1770452152975">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1770452152975">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" data-fls-header-scroll="" class="header">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-lp="" class="header">
 				<div class="header__container">
-					<a href="#" class="header__logo">
+					<a data-fls-scrollto-header="" data-fls-scrollto=".index" href="#" class="header__logo">
 						<img src="./assets/img/logo.svg" alt="Logo Ekstrim Kvadro">
 					</a>
 					<div data-fls-menu="" class="header__menu menu">
@@ -44,7 +44,7 @@
 </fetch>
 -->
 					<div class="header__actions">
-						<a data-fls-dynamic=".menu__body,600" href="tel:+380680000000" class="header__link link">+38 (068) 000 00 00</a>
+						<a data-fls-dynamic=".menu__body,600" href="telс:+380680000000" class="header__link link">+38 (068) 000 00 00</a>
 						<a data-fls-scrollto-header="" data-fls-scrollto=".join" data-fls-dynamic=".menu__body,400" href="#" class="header__button button">Забронювати заїзд</a>
 					</div>
 					<button data-burger="" type="button" class="header__icon icon-menu">
@@ -75,29 +75,20 @@
 								</div>
 							</div>
 							<div class="promo__picture">
-								<picture>
-									<source media="(max-width: 600px)" srcset="./assets/img/promo/atv-600.webp" type="image/webp">
-									<img alt="image atv" class="promo__img" src="./assets/img/promo/atv.webp">
-								</picture>
+								<img alt="image atv" class="promo__img" src="./assets/img/promo/atv.webp">
 								<img src="./assets/img/promo/decor.svg" aria-hidden="true" alt="decor" class="promo__decor">
-								<div class="promo__detail detail">
+								<a href="#" data-fls-popup-link="popup" class="promo__detail detail">
 									<div class="detail__icon">
 										<img src="./assets/img/icons/atv.svg" alt="icon atv">
 									</div>
 									<div class="detail__descr">Детальніше про наші квадроцикли</div>
-								</div>
+								</a>
 							</div>
 						</div>
 						<div class="promo__bg bg-promo">
 							<img src="./assets/img/promo/background/layer-01.svg" aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--1">
-							<picture>
-								<source media="(max-width: 600px)" srcset="./assets/img/promo/background/layer-02-600.webp" type="image/webp">
-								<source media="(max-width: 1200px)" srcset="./assets/img/promo/background/layer-02-1200.webp" type="image/webp">
-								<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--2" src="./assets/img/promo/background/layer-02.webp">
-							</picture>
-							<picture>
-								<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--3" src="./assets/img/promo/background/layer-03.webp">
-							</picture>
+							<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--2" src="./assets/img/promo/background/layer-02.webp">
+							<img aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--3" src="./assets/img/promo/background/layer-03.webp">
 							<img src="./assets/img/promo/background/layer-04.svg" aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--4">
 						</div>
 					</section>
@@ -128,13 +119,9 @@
 										<div class="form-find__price">1500 грн</div>
 										<div class="form-find__text">за квадроцикл/година</div>
 									</div>
-									<button type="submit" class="form-find__button">Знайти варіанти</button>
+									<button data-fls-popup-link="popup" type="submit" class="form-find__button">Залишити заявку</button>
 								</form>
-								<picture>
-									<source media="(max-width: 600px)" srcset="./assets/img/find-bg-600.webp" type="image/webp">
-									<source media="(max-width: 1200px)" srcset="./assets/img/find-bg-1200.webp" type="image/webp">
-									<img alt="background" aria-hidden="true" class="find__bg" src="./assets/img/find-bg.webp">
-								</picture>
+								<img alt="background" aria-hidden="true" class="find__bg" src="./assets/img/find-bg.webp">
 							</div>
 						</div>
 					</div>
@@ -170,7 +157,8 @@
 											</p>
 										</div>
 									</div>
-									<a href="#" class="bottom-about__button button">Забронювати заїзд</a>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto=".join" class="bottom-about__button button">Забронювати
+						заїзд</a>
 								</div>
 								<div class="bottom-about__befits befits">
 									<div class="befits__item">
@@ -200,11 +188,7 @@
 								</div>
 							</div>
 							<div class="bottom-about__bg">
-								<picture>
-									<source media="(max-width: 600px)" srcset="./assets/img/race-bg-600.webp" type="image/webp">
-									<source media="(max-width: 1200px)" srcset="./assets/img/race-bg-1200.webp" type="image/webp">
-									<img aria-hidden="true" alt="background" src="./assets/img/race-bg.webp">
-								</picture>
+								<img aria-hidden="true" alt="background" src="./assets/img/race-bg.webp">
 							</div>
 						</div>
 					</section>
@@ -227,9 +211,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -266,9 +248,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -304,9 +284,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -343,9 +321,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -382,9 +358,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -421,9 +395,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -460,9 +432,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -499,9 +469,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -538,9 +506,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -577,9 +543,7 @@
 											</div>
 											<div class="card-route__block">
 												<a href="#" class="card-route__img">
-													<picture>
-														<img alt="image route 01" src="./assets/img/routes/route-01.webp">
-													</picture>
+													<img alt="image route 01" src="./assets/img/routes/route-01.webp">
 												</a>
 												<div class="card-route__body">
 													<ul class="card-route__list list-route">
@@ -615,11 +579,7 @@
 								</div>
 							</div>
 						</div>
-						<picture>
-							<source media="(max-width: 600px)" srcset="./assets/img/decors/routes-decor-600.webp" type="image/webp">
-							<source media="(max-width: 1200px)" srcset="./assets/img/decors/routes-decor-1200.webp" type="image/webp">
-							<img aria-hidden="true" alt="background" class="routes__bg" src="./assets/img/decors/routes-decor.webp">
-						</picture>
+						<img aria-hidden="true" alt="background" class="routes__bg" src="./assets/img/decors/routes-decor.webp">
 					</section>
 					<section id="driving" class="driving">
 						<div data-fls-watcher="" data-fls-watcher-margin="0.3" data-fls-watcher-once="" class="driving__container">
@@ -664,15 +624,13 @@
 						</div>
 						<img src="./assets/img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="driving__decor">
 					</section>
-					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" id="reviews" class="reviews">
+					<section data-fls-watcher="" data-fls-watcher-threshold="0.25" data-fls-watcher-once="" id="reviews" class="reviews">
 						<div class="reviews__content">
 							<h2 class="reviews__title title">Відгуки</h2>
 							<div class="reviews__items">
 								<article class="reviews__item item-review">
 									<div class="item-review__img">
-										<picture>
-											<img alt="review" src="./assets/img/reviews/review-01.webp">
-										</picture>
+										<img alt="review" src="./assets/img/reviews/review-01.webp">
 									</div>
 									<div class="item-review__body">
 										<h3 class="item-review__title">Каталися вперше — емоцій море.</h3>
@@ -686,9 +644,7 @@
 								</article>
 								<article class="reviews__item item-review">
 									<div class="item-review__img">
-										<picture>
-											<img alt="review" src="./assets/img/reviews/review-02.webp">
-										</picture>
+										<img alt="review" src="./assets/img/reviews/review-02.webp">
 									</div>
 									<div class="item-review__body">
 										<h3 class="item-review__title">Дуже сподобалась організація.</h3>
@@ -702,9 +658,7 @@
 								</article>
 								<article class="reviews__item item-review">
 									<div class="item-review__img">
-										<picture>
-											<img alt="review" src="./assets/img/reviews/review-03.webp">
-										</picture>
+										<img alt="review" src="./assets/img/reviews/review-03.webp">
 									</div>
 									<div class="item-review__body">
 										<h3 class="item-review__title">Збирались друзями — всі залишилися задоволені.</h3>
@@ -717,16 +671,12 @@
 								</article>
 								<article class="reviews__item item-review">
 									<div class="item-review__img">
-										<picture>
-											<img alt="review" src="./assets/img/reviews/review-04.webp">
-										</picture>
+										<img alt="review" src="./assets/img/reviews/review-04.webp">
 									</div>
 								</article>
 								<article class="reviews__item item-review">
 									<div class="item-review__img">
-										<picture>
-											<img alt="review" src="./assets/img/reviews/review-05.webp">
-										</picture>
+										<img alt="review" src="./assets/img/reviews/review-05.webp">
 									</div>
 									<div class="item-review__body">
 										<h3 class="item-review__title">Збирались друзями — всі залишилися задоволені.</h3>
@@ -780,17 +730,17 @@
 									<div class="join__label">Соцмережі</div>
 									<ul data-fls-socials="" class="join__socials socials">
 										<li class="socials__item">
-											<a href="#" class="socials__link">
+											<a target="_blank" href="https://www.instagram.com/ekstrim_kvadro_slavsko?igsh=d2hnMXI1ZzJhNHY0&utm_source=qr" class="socials__link">
 												<img src="./assets/img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
 											</a>
 										</li>
 										<li class="socials__item">
-											<a href="#" class="socials__link">
+											<a target="_blank" href="viber:/chat?number=%2B380980979501" class="socials__link">
 												<img src="./assets/img/icons/social-viber.svg" alt="icon viber" class="socials__img">
 											</a>
 										</li>
 										<li class="socials__item">
-											<a href="#" class="socials__link">
+											<a target="_blank" href="https://t.me/taras_denechko" class="socials__link">
 												<img src="./assets/img/icons/social-telegram.svg" alt="icon telegram" class="socials__img">
 											</a>
 										</li>
@@ -798,11 +748,7 @@
 								</div>
 							</div>
 						</div>
-						<picture>
-							<source media="(max-width: 600px)" srcset="./assets/img/join/background-600.webp" type="image/webp">
-							<source media="(max-width: 1200px)" srcset="./assets/img/join/background-1200.webp" type="image/webp">
-							<img alt="background" aria-hidden="true" class="join__bg" src="./assets/img/join/background.webp">
-						</picture>
+						<img alt="background" aria-hidden="true" class="join__bg" src="./assets/img/join/background.webp">
 					</section>
 					<section data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" class="questions">
 						<div class="questions__container">
@@ -828,11 +774,13 @@
 									<summary class="spollers__title">Що входить у вартість прокату?</summary>
 									<div class="spollers__body">
 										<div class="spollers__text">
-											<p>
-												Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
-								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
-								комфортним і безпечним навіть для новачків.
-											</p>
+											<p>У вартість входить усе необхідне для комфортної та безпечної поїздки:</p>
+											<ul class="spollers__list list-spollers">
+												<li class="list-spollers__item">сучасний та справний квадроцикл</li>
+												<li class="list-spollers__item">супровід досвідченого інструктора</li>
+												<li class="list-spollers__item">повне екіпірування: захисний костюм і шолом</li>
+											</ul>
+											<p>Вам залишається лише отримувати драйв і яскраві емоції</p>
 										</div>
 									</div>
 								</details>
@@ -841,9 +789,8 @@
 									<div class="spollers__body">
 										<div class="spollers__text">
 											<p>
-												Ні, спеціальний досвід не потрібен. Перед стартом кожен учасник проходить детальний інструктаж із техніки
-								безпеки та керування квадроциклом. Під час маршруту вас супроводжує досвідчений інструктор, тому заїзд буде
-								комфортним і безпечним навіть для новачків.
+												Так, можна. Наші квадроцикли розраховані на двох осіб, тому ви можете кататися разом — із другом, коханою
+								людиною або рідними.
 											</p>
 										</div>
 									</div>
@@ -899,17 +846,17 @@
 							<h5 class="footer__title">Ми у соцмережах:</h5>
 							<ul data-fls-socials="" class="footer__socials socials socials--small">
 								<li class="socials__item">
-									<a href="#" class="socials__link">
+									<a target="_blank" href="https://www.instagram.com/ekstrim_kvadro_slavsko?igsh=d2hnMXI1ZzJhNHY0&utm_source=qr" class="socials__link">
 										<img src="./assets/img/icons/social-instagram.svg" alt="icon instagram" class="socials__img">
 									</a>
 								</li>
 								<li class="socials__item">
-									<a href="#" class="socials__link">
+									<a target="_blank" href="viber:/chat?number=%2B380980979501" class="socials__link">
 										<img src="./assets/img/icons/social-viber.svg" alt="icon viber" class="socials__img">
 									</a>
 								</li>
 								<li class="socials__item">
-									<a href="#" class="socials__link">
+									<a target="_blank" href="https://t.me/taras_denechko" class="socials__link">
 										<img src="./assets/img/icons/social-telegram.svg" alt="icon telegram" class="socials__img">
 									</a>
 								</li>
@@ -919,6 +866,14 @@
 					<div class="footer__agency">Developed and maintained by vau.agency.</div>
 				</div>
 			</footer>
+		</div>
+		<div data-fls-popup="popup" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<button data-fls-popup-close="" type="button" class="popup__close"></button>
+					<div data-fls-popup-content="" class="popup__text"></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

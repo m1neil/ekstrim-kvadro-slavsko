@@ -3,12 +3,12 @@
 		position: fixed;
 		width: 300px;
 		height: 100svh;
-		right: -100%;
+		left: -100%;
 		top: 0;
 		overflow: auto;
 		padding: 85px 15px 30px 15px;
 		transition:
-			right 0.3s,
+			left 0.3s,
 			opacity 0.3s;
 		background-color: $lightColor;
 		opacity: 0;
@@ -17,23 +17,23 @@
 			position: fixed;
 			width: 300px;
 			height: 70px;
-			right: -100%;
+			left: -100%;
 			top: 0;
-			transition: right 0.3s;
+			transition: left 0.3s;
 			z-index: 2;
 			background-color: $lightColor;
 		}
 		[data-fls-menu-open] & {
-			right: 0;
+			left: 0;
 			opacity: 1;
 			&::before {
-				right: 0;
+				left: 0;
 			}
 		}
 	}
 	@media (max-width: toEm($mobile)) {
 		width: 100%;
-		padding-top: 80px;
+		padding-top: 110px;
 		&::before {
 			width: 100%;
 		}
@@ -42,9 +42,8 @@
 	// .menu__body
 	&__body {
 		@media (max-width: toEm($tablet)) {
-			text-align: right;
 			> *:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -62,7 +61,7 @@
 	&__item {
 		@media (max-width: toEm($tablet)) {
 			&:not(:last-child) {
-				margin-bottom: 16px;
+				margin-bottom: 25px;
 			}
 		}
 	}
@@ -80,7 +79,8 @@
 			}
 		}
 		@media (max-width: toEm($tablet)) {
-			font-size: 20px;
+			font-size: 22px;
+			font-weight: 500;
 		}
 	}
 }
