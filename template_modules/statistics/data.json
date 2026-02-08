@@ -1,6 +1,23 @@
 {
   "statistics": {
-    "sessions": [],
-    "files": []
+    "sessions": [
+      {
+        "date": "07.02.2026",
+        "start": 1770499159072,
+        "end": 1770499898549
+      },
+      {
+        "date": "07.02.2026",
+        "start": 1770499908189,
+        "end": 1770500242079,
+        "type": "build"
+      }
+    ],
+    "files": [
+      "index.html",
+      "slider.js",
+      "index.scss",
+      "_functions.js"
+    ]
   }
 }

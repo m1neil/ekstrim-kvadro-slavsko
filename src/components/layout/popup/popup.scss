@@ -7,7 +7,7 @@ body::after {
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: opacity 0.8s ease 0s;
+	transition: opacity 0.6s ease 0s;
 	pointer-events: none;
 	z-index: 149;
 }
@@ -20,9 +20,12 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	transition: visibility 0.8s ease 0s;
+	transition: visibility 0.6s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	@media (min-width: toEm($mobile)) {
+		padding: 30px 10px;
+	}
 	&[data-fls-popup-active] {
 		z-index: 150;
 		visibility: visible;
@@ -33,23 +36,45 @@ body::after {
 [data-fls-popup-active] [data-fls-popup-body] {
 	visibility: visible;
 	transform: scale(1);
+	opacity: 1;
 }
 [data-fls-popup-wrapper] {
-	min-height: 100%;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	@media (min-width: toEm($mobile)) {
+		justify-content: center;
+		align-items: center;
+	}
+	@media (min-width: toEm($mobile)) {
+		justify-content: center;
+		align-items: center;
+	}
+	@media (max-width: toEm($mobile)) {
+		flex-direction: column;
+	}
 }
 [data-fls-popup-body] {
 	visibility: hidden;
+	transform: scale(0.3);
+	opacity: 0;
 	transition:
 		transform 0.3s ease 0s,
-		visibility 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	height: 100%;
-	flex-grow: 1;
+		visibility 0.3s ease 0s,
+		opacity 0.3s ease 0s;
+	background-color: $lightColor;
+	padding: 46px 24px;
+	max-width: #{$containerWidth}px;
+	padding-inline: math.div($containerPadding, 2) px;
+	@media (max-width: toEm($mobile)) {
+		width: 100%;
+		flex-grow: 1;
+		padding-top: 88px;
+		padding: 88px 16px 16px;
+	}
 }
 
 [data-fls-popup-youtube-place] iframe {
@@ -65,17 +90,104 @@ body::after {
 	&::after {
 		content: "";
 		position: absolute;
-		top: 50%;
-		left: 50%;
 		width: 100%;
 		height: 2px;
+		top: 50%;
+		left: 50%;
 		background-color: #000;
 		translate: -50% -50%;
+		border-radius: 5px;
 	}
 	&::before {
 		rotate: 45deg;
 	}
 	&::after {
 		rotate: -45deg;
+	}
+}
+
+.popup {
+	// .popup__body
+	&__body {
+		position: relative;
+		overflow: hidden;
+	}
+	// .popup__close
+	&__close {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		@media (max-width: toEm($mobile)) {
+			right: 22px;
+		}
+	}
+	// .popup__text
+	&__text {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			row-gap: 32px;
+		}
+	}
+	// .popup__img
+	&__img {
+		margin-left: -60px;
+		@media (min-width: toEm($mobile)) {
+			flex-basis: 670px;
+		}
+		@media (max-width: toEm($mobile)) {
+			margin-left: -52px;
+		}
+		img {
+			aspect-ratio: 670 / 467;
+			object-fit: contain;
+			@media (max-width: toEm($mobile)) {
+				aspect-ratio: 411 / 310;
+			}
+		}
+	}
+	// .popup__content
+	&__content {
+		@media (min-width: toEm($mobile)) {
+			flex-basis: 856px;
+		}
+	}
+	// .popup__title
+	&__title {
+		max-width: 505px;
+		margin-bottom: 24px;
+		span {
+			color: #000;
+		}
+	}
+	// .popup__list
+	&__list {
+	}
+}
+
+.list-popup {
+	// .list-popup__item
+	&__item {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+		column-gap: 10px;
+		display: flex;
+		align-items: flex-start;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		&::before {
+			content: "";
+			width: 5px;
+			flex-shrink: 0;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background-color: $mainColor;
+			margin-top: 8px;
+		}
 	}
 }

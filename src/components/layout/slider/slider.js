@@ -68,6 +68,7 @@ function initSliders() {
 			scrollbar: {
 				el: '.routes .swiper-scrollbar',
 				hide: false,
+				draggable: true,
 			},
 
 			// Кнопки "вліво/вправо"

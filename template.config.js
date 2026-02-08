@@ -31,8 +31,8 @@ export default {
 		transition: '300',
 	},
 	statistics: {
-		enable: false,
-		showonbuild: false,
+		enable: true,
+		showonbuild: true,
 	},
 	server: {
 		path: './',

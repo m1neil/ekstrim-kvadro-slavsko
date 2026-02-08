@@ -28,7 +28,19 @@ import { s as slideUp, a as slideToggle, d as dataMediaQueries, b as bodyLock, c
     fetch(link.href, fetchOpts);
   }
 })();
-const regexPhoneNumber = /^\+380(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/;
+window.addEventListener("load", windowLoaded);
+function windowLoaded() {
+  document.addEventListener("formSent", (e) => {
+    const currentForm = e.detail.form;
+    const formId = currentForm.getAttribute("id");
+    if (formId !== "join-member") return;
+    const infoSuccess = currentForm.parentElement.nextElementSibling;
+    if (!infoSuccess) return;
+    infoSuccess.classList.add("--show");
+    currentForm.parentElement.classList.add("--hide");
+  });
+}
+const regexPhoneNumber = /^\+?(38)?0(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/;
 let formValidate = {
   getErrors(form) {
     let error = 0;
@@ -5411,7 +5423,8 @@ function initSliders() {
       // Скроллбар
       scrollbar: {
         el: ".routes .swiper-scrollbar",
-        hide: false
+        hide: false,
+        draggable: true
       },
       // Кнопки "вліво/вправо"
       navigation: {

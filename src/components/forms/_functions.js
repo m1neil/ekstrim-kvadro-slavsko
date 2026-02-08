@@ -2,7 +2,7 @@
 import { FLS } from '@js/common/functions.js'
 
 const regexPhoneNumber =
-	/^\+380(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/
+	/^\+?(38)?0(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/
 
 // Валідація форм
 export let formValidate = {
