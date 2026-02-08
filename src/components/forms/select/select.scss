@@ -13,8 +13,12 @@
 		color: inherit;
 		text-align: left;
 		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		background-color: $lightColor;
+		transition: background-color 0.3s;
 		cursor: pointer;
+		.--select-focus & {
+			background-color: #fff;
+		}
 		width: 100%;
 		border-radius: 16px;
 	}

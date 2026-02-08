@@ -11,13 +11,52 @@
         "start": 1770499908189,
         "end": 1770500242079,
         "type": "build"
+      },
+      {
+        "date": "08.02.2026",
+        "start": 1770549973952,
+        "end": 1770551082912
+      },
+      {
+        "date": "08.02.2026",
+        "start": 1770551285436,
+        "end": 1770551869952,
+        "type": "build"
+      },
+      {
+        "date": "08.02.2026",
+        "start": 1770551956310,
+        "end": 1770552537532,
+        "type": "build"
+      },
+      {
+        "date": "08.02.2026",
+        "start": 1770559838021,
+        "end": 1770560093300,
+        "type": "build"
+      },
+      {
+        "date": "08.02.2026",
+        "start": 1770560153887,
+        "end": 1770560175738,
+        "type": "build"
       }
     ],
     "files": [
       "index.html",
       "slider.js",
       "index.scss",
-      "_functions.js"
+      "_functions.js",
+      "input.scss",
+      "select.scss",
+      "form.scss",
+      "index.js",
+      "popup.scss",
+      "popup.js",
+      "menu.js",
+      "header.html",
+      "header.scss",
+      "scroll.scss"
     ]
   }
 }

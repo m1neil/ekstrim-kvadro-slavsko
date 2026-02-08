@@ -30,14 +30,22 @@ import { s as slideUp, a as slideToggle, d as dataMediaQueries, b as bodyLock, c
 })();
 window.addEventListener("load", windowLoaded);
 function windowLoaded() {
+  let timeout;
   document.addEventListener("formSent", (e) => {
     const currentForm = e.detail.form;
     const formId = currentForm.getAttribute("id");
-    if (formId !== "join-member") return;
-    const infoSuccess = currentForm.parentElement.nextElementSibling;
-    if (!infoSuccess) return;
-    infoSuccess.classList.add("--show");
-    currentForm.parentElement.classList.add("--hide");
+    if (formId === "join-member") {
+      const infoSuccess = currentForm.parentElement.nextElementSibling;
+      if (!infoSuccess) return;
+      infoSuccess.classList.add("--show");
+      currentForm.parentElement.classList.add("--hide");
+    } else {
+      clearTimeout(timeout);
+      currentForm.classList.add("--sended");
+      timeout = setTimeout(() => {
+        currentForm.classList.remove("--sended");
+      }, 5e3);
+    }
   });
 }
 const regexPhoneNumber = /^\+?(38)?0(39|50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/;
@@ -5565,47 +5573,64 @@ class Popup {
   buildPopup() {
   }
   eventsPopup() {
-    document.addEventListener("click", (function(e) {
-      const buttonOpen = e.target.closest(`[${this.options.attributeOpenButton}]`);
-      if (buttonOpen) {
-        e.preventDefault();
-        this._dataValue = buttonOpen.getAttribute(this.options.attributeOpenButton) ? buttonOpen.getAttribute(this.options.attributeOpenButton) : "error";
-        this.youTubeCode = buttonOpen.getAttribute(this.options.youtubeAttribute) ? buttonOpen.getAttribute(this.options.youtubeAttribute) : null;
-        if (this._dataValue !== "error") {
-          if (!this.isOpen) this.lastFocusEl = buttonOpen;
-          this.targetOpen.selector = `${this._dataValue}`;
-          this._selectorOpen = true;
-          this.open();
+    document.addEventListener(
+      "click",
+      (function(e) {
+        const buttonOpen = e.target.closest(
+          `[${this.options.attributeOpenButton}]`
+        );
+        if (buttonOpen) {
+          e.preventDefault();
+          this._dataValue = buttonOpen.getAttribute(
+            this.options.attributeOpenButton
+          ) ? buttonOpen.getAttribute(this.options.attributeOpenButton) : "error";
+          this.youTubeCode = buttonOpen.getAttribute(
+            this.options.youtubeAttribute
+          ) ? buttonOpen.getAttribute(this.options.youtubeAttribute) : null;
+          if (this._dataValue !== "error") {
+            if (!this.isOpen) this.lastFocusEl = buttonOpen;
+            this.targetOpen.selector = `${this._dataValue}`;
+            this._selectorOpen = true;
+            this.open();
+            return;
+          }
           return;
         }
-        return;
-      }
-      const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
-      if (buttonClose || !e.target.closest(`[${this.options.classes.popupContent}]`) && this.isOpen) {
-        e.preventDefault();
-        this.close();
-        return;
-      }
-    }).bind(this));
-    document.addEventListener("keydown", (function(e) {
-      if (this.options.closeEsc && e.which == 27 && e.code === "Escape" && this.isOpen) {
-        e.preventDefault();
-        this.close();
-        return;
-      }
-      if (this.options.focusCatch && e.which == 9 && this.isOpen) {
-        this._focusCatch(e);
-        return;
-      }
-    }).bind(this));
-    if (this.options.hashSettings.goHash) {
-      window.addEventListener("hashchange", (function() {
-        if (window.location.hash) {
-          this._openToHash();
-        } else {
-          this.close(this.targetOpen.selector);
+        const buttonClose = e.target.closest(
+          `[${this.options.attributeCloseButton}]`
+        );
+        if (buttonClose || !e.target.closest(`[${this.options.classes.popupContent}]`) && this.isOpen) {
+          e.preventDefault();
+          this.close();
+          return;
         }
-      }).bind(this));
+      }).bind(this)
+    );
+    document.addEventListener(
+      "keydown",
+      (function(e) {
+        if (this.options.closeEsc && e.which == 27 && e.code === "Escape" && this.isOpen) {
+          e.preventDefault();
+          this.close();
+          return;
+        }
+        if (this.options.focusCatch && e.which == 9 && this.isOpen) {
+          this._focusCatch(e);
+          return;
+        }
+      }).bind(this)
+    );
+    if (this.options.hashSettings.goHash) {
+      window.addEventListener(
+        "hashchange",
+        (function() {
+          if (window.location.hash) {
+            this._openToHash();
+          } else {
+            this.close(this.targetOpen.selector);
+          }
+        }).bind(this)
+      );
       if (window.location.hash) {
         this._openToHash();
       }
@@ -5622,11 +5647,16 @@ class Popup {
         this._reopen = true;
         this.close();
       }
-      if (!this._selectorOpen) this.targetOpen.selector = this.lastClosed.selector;
+      if (!this._selectorOpen)
+        this.targetOpen.selector = this.lastClosed.selector;
       if (!this._reopen) this.previousActiveElement = document.activeElement;
-      this.targetOpen.element = document.querySelector(`[${this.options.attributeMain}=${this.targetOpen.selector}]`);
+      this.targetOpen.element = document.querySelector(
+        `[${this.options.attributeMain}=${this.targetOpen.selector}]`
+      );
       if (this.targetOpen.element) {
-        const codeVideo = this.youTubeCode || this.targetOpen.element.getAttribute(`${this.options.youtubeAttribute}`);
+        const codeVideo = this.youTubeCode || this.targetOpen.element.getAttribute(
+          `${this.options.youtubeAttribute}`
+        );
         if (codeVideo) {
           const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`;
           const iframe = document.createElement("iframe");
@@ -5634,7 +5664,9 @@ class Popup {
           iframe.setAttribute("allowfullscreen", "");
           iframe.setAttribute("allow", `${autoplay}; encrypted-media`);
           iframe.setAttribute("src", urlVideo);
-          if (!this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) {
+          if (!this.targetOpen.element.querySelector(
+            `[${this.options.youtubePlaceAttribute}]`
+          )) {
             this.targetOpen.element.querySelector("[data-fls-popup-content]").setAttribute(`${this.options.youtubePlaceAttribute}`, "");
           }
           this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
@@ -5644,13 +5676,21 @@ class Popup {
           this._setHash();
         }
         this.options.on.beforeOpen(this);
-        document.dispatchEvent(new CustomEvent("beforePopupOpen", {
-          detail: {
-            popup: this
-          }
-        }));
-        this.targetOpen.element.setAttribute(this.options.classes.popupActive, "");
-        document.documentElement.setAttribute(this.options.classes.bodyActive, "");
+        document.dispatchEvent(
+          new CustomEvent("beforePopupOpen", {
+            detail: {
+              popup: this
+            }
+          })
+        );
+        this.targetOpen.element.setAttribute(
+          this.options.classes.popupActive,
+          ""
+        );
+        document.documentElement.setAttribute(
+          this.options.classes.bodyActive,
+          ""
+        );
         if (!this._reopen) {
           !this.bodyLock ? bodyLock() : null;
         } else this._reopen = false;
@@ -5663,11 +5703,13 @@ class Popup {
           this._focusTrap();
         }, 50);
         this.options.on.afterOpen(this);
-        document.dispatchEvent(new CustomEvent("afterPopupOpen", {
-          detail: {
-            popup: this
-          }
-        }));
+        document.dispatchEvent(
+          new CustomEvent("afterPopupOpen", {
+            detail: {
+              popup: this
+            }
+          })
+        );
       }
     }
   }
@@ -5679,14 +5721,20 @@ class Popup {
       return;
     }
     this.options.on.beforeClose(this);
-    document.dispatchEvent(new CustomEvent("beforePopupClose", {
-      detail: {
-        popup: this
-      }
-    }));
-    if (this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) {
+    document.dispatchEvent(
+      new CustomEvent("beforePopupClose", {
+        detail: {
+          popup: this
+        }
+      })
+    );
+    if (this.targetOpen.element.querySelector(
+      `[${this.options.youtubePlaceAttribute}]`
+    )) {
       setTimeout(() => {
-        this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = "";
+        this.targetOpen.element.querySelector(
+          `[${this.options.youtubePlaceAttribute}]`
+        ).innerHTML = "";
       }, 500);
     }
     this.previousOpen.element.removeAttribute(this.options.classes.popupActive);
@@ -5702,16 +5750,18 @@ class Popup {
       this.lastClosed.element = this.previousOpen.element;
     }
     this.options.on.afterClose(this);
-    document.dispatchEvent(new CustomEvent("afterPopupClose", {
-      detail: {
-        popup: this
-      }
-    }));
+    document.dispatchEvent(
+      new CustomEvent("afterPopupClose", {
+        detail: {
+          popup: this
+        }
+      })
+    );
     setTimeout(() => {
       this._focusTrap();
     }, 50);
   }
-  // Отримання хешу 
+  // Отримання хешу
   _getHash() {
     if (this.options.hashSettings.location) {
       this.hash = `#${this.targetOpen.selector}`;
@@ -5719,7 +5769,9 @@ class Popup {
   }
   _openToHash() {
     let classInHash = window.location.hash.replace("#", "");
-    const openButton = document.querySelector(`[${this.options.attributeOpenButton}="${classInHash}"]`);
+    const openButton = document.querySelector(
+      `[${this.options.attributeOpenButton}="${classInHash}"]`
+    );
     if (openButton) {
       this.youTubeCode = openButton.getAttribute(this.options.youtubeAttribute) ? openButton.getAttribute(this.options.youtubeAttribute) : null;
     }
@@ -5760,7 +5812,7 @@ function menuInit() {
     if (bodyLockStatus && e.target.closest("[data-burger]")) {
       bodyLockToggle(300);
       document.documentElement.toggleAttribute("data-fls-menu-open");
-    } else if (!e.target.closest(".menu")) {
+    } else if (!e.target.closest(".menu") && document.documentElement.hasAttribute("data-fls-menu-open")) {
       bodyUnlock(300);
       document.documentElement.removeAttribute("data-fls-menu-open");
     }

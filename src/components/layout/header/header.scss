@@ -5,6 +5,19 @@
 	width: 100%;
 	padding-block: 24px;
 	z-index: 50;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		all 0.3s,
+		padding-right 0s;
+	&.--watcher-view {
+		opacity: 1;
+		visibility: visible;
+	}
+	&.--header-scroll {
+		background-color: $lightColor;
+		padding-block: 15px;
+	}
 	@media (max-width: toEm($tablet)) {
 		padding-block: 15px;
 	}

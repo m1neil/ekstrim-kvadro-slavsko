@@ -14,7 +14,10 @@ export function menuInit() {
 		if (bodyLockStatus && e.target.closest('[data-burger]')) {
 			bodyLockToggle(300)
 			document.documentElement.toggleAttribute('data-fls-menu-open')
-		} else if (!e.target.closest('.menu')) {
+		} else if (
+			!e.target.closest('.menu') &&
+			document.documentElement.hasAttribute('data-fls-menu-open')
+		) {
 			bodyUnlock(300)
 			document.documentElement.removeAttribute('data-fls-menu-open')
 		}

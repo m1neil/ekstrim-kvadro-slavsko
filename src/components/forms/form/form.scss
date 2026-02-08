@@ -21,8 +21,9 @@
 			grid-column: span 2;
 		}
 	}
-	[data-fls-form-error] {
-		font-weight: 500;
-		color: red;
-	}
+}
+
+[data-fls-form-error] {
+	font-weight: 500;
+	color: red;
 }

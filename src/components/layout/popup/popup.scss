@@ -67,8 +67,6 @@ body::after {
 		opacity 0.3s ease 0s;
 	background-color: $lightColor;
 	padding: 46px 24px;
-	max-width: #{$containerWidth}px;
-	padding-inline: math.div($containerPadding, 2) px;
 	@media (max-width: toEm($mobile)) {
 		width: 100%;
 		flex-grow: 1;

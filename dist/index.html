@@ -3,20 +3,37 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="title" content="Ekstrim Kvadro Slavsko">
 		<link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
 		<link rel="shortcut icon" href="./assets/img/favicon/favicon.ico">
 		<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
 		<meta name="apple-mobile-web-app-title" content="Ekstrim Kvadro Slavsko">
 		<link rel="manifest" href="./site.webmanifest/site.webmanifest">
-		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1770500242054"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1770500242054">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1770500242054">
+		<meta name="description" content="Ми надаємо прокат квадроциклів у Славському для всіх, хто хоче поєднати активний відпочинок, адреналін та справжні гірські краєвиди.">
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<!-- змінити на реальну силку сайту -->
+		<meta property="og:url" content="https://effulgent-cupcake-ced8c4.netlify.app/">
+		<meta property="og:title" content="Ekstrim Kvadro Slavsko">
+		<meta property="og:description" content="Ми надаємо прокат квадроциклів у Славському для всіх, хто хоче поєднати активний відпочинок, адреналін та справжні гірські краєвиди.">
+		<meta property="og:image" content="./assets/img/banner.jpg">
+		<meta property="og:image:type" content="image/jpeg">
+		<!-- X (Twitter) -->
+		<meta property="twitter:card" content="summary_large_image">
+		<!-- змінити на реальну силку сайту -->
+		<meta property="twitter:url" content="https://effulgent-cupcake-ced8c4.netlify.app/">
+		<meta property="twitter:title" content="Ekstrim Kvadro Slavsko">
+		<meta property="twitter:description" content="Ми надаємо прокат квадроциклів у Славському для всіх, хто хоче поєднати активний відпочинок, адреналін та справжні гірські краєвиди.">
+		<meta property="twitter:image" content="assets/img/banner.jpg">
+		<title>Ekstrim Kvadro Slavsko</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1770560175713"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1770560175713">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1770560175713">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" data-fls-header-scroll="" data-fls-lp="" class="header">
+			<header data-fls-watcher="" data-fls-header="" data-fls-header-scroll="" data-fls-lp="" class="header">
 				<div class="header__container">
 					<a data-fls-scrollto-header="" data-fls-scrollto=".index" href="#" class="header__logo">
 						<img src="./assets/img/logo.svg" alt="Logo Ekstrim Kvadro">
@@ -97,10 +114,46 @@
 							<img src="./assets/img/promo/background/layer-04.svg" aria-hidden="true" alt="layer" class="bg-promo__layer bg-promo__layer--4">
 						</div>
 					</section>
+					<!-- * Old version -->
+					<!--
+<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once id="prices" class="index__find find">
+<div class="find__container">
+<div class="find__body">
+<form data-fls-form="dev" action="#" class="find__form form-find">
+<div class="form-find__column">
+<label for="#" class="form-find__label">Оберіть складність</label>
+<select name="form[]" data-fls-select data-fls-select-modif="form-find__select">
+<option value="1">Легка</option>
+<option value="2" selected>Середня</option>
+<option value="3">Важка</option>
+<option value="4">Неможлива</option>
+</select>
+</div>
+<div class="form-find__column">
+<label for="#" class="form-find__label">Тривалість</label>
+<select name="form[]" data-fls-select data-fls-select-modif="form-find__select">
+<option value="1">Від 1 години</option>
+<option value="2" selected>Від 2 годин</option>
+<option value="3">Від 3 годин</option>
+<option value="4">Від 4 годин</option>
+</select>
+</div>
+<div class="form-find__column">
+<label for="#" class="form-find__label">Ціна</label>
+<div class="form-find__price">1500 грн</div>
+<div class="form-find__text">за квадроцикл/година</div>
+</div>
+<button type="submit" class="form-find__button">Залишити заявку</button>
+</form>
+<img src="@img/find-bg.png" alt="background" aria-hidden="true" class="find__bg">
+</div>
+</div>
+</div>
+-->
 					<div data-fls-watcher="" data-fls-watcher-threshold="0.3" data-fls-watcher-once="" id="prices" class="index__find find">
 						<div class="find__container">
 							<div class="find__body">
-								<form data-fls-form="dev" action="#" class="find__form form-find">
+								<form data-fls-select-one="" data-fls-form="dev" action="#" class="find__form form-find">
 									<div class="form-find__column">
 										<label for="#" class="form-find__label">Оберіть складність</label>
 										<select name="form[]" data-fls-select="" data-fls-select-modif="form-find__select">
@@ -120,12 +173,12 @@
 										</select>
 									</div>
 									<div class="form-find__column">
-										<label for="#" class="form-find__label">Ціна</label>
-										<div class="form-find__price">1500 грн</div>
-										<div class="form-find__text">за квадроцикл/година</div>
+										<label for="#" class="form-find__label">Телефон</label>
+										<input data-fls-input="" data-fls-phone="" required type="text" name="form[phone]" placeholder="+380" class="form-find__input">
 									</div>
-									<button data-fls-popup-link="popup" type="submit" class="form-find__button">Залишити заявку</button>
+									<button type="submit" class="form-find__button">Залишити заявку</button>
 								</form>
+								<div class="find__success">Заявка відправлена</div>
 								<img alt="background" aria-hidden="true" class="find__bg" src="./assets/img/find-bg.webp">
 							</div>
 						</div>

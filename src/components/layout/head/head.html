@@ -4,6 +4,7 @@
 	</if>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Ekstrim Kvadro Slavsko" />
 	<include src="@components/layout/head/fonts-preload.html"></include>
 	<link rel="stylesheet" href="@styles/fonts/fonts.css">
 	<link rel="stylesheet" href="@styles/fonts/iconfont.css">
@@ -20,5 +21,22 @@
 	<if condition="'[[description]]' !== ''">
 		<meta name="description" content="[[description]]">
 	</if>
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<!-- змінити на реальну силку сайту -->
+	<meta property="og:url" content="https://effulgent-cupcake-ced8c4.netlify.app/" />
+	<meta property="og:title" content="Ekstrim Kvadro Slavsko" />
+	<meta property="og:description"
+		content="[[description]]" />
+	<meta property="og:image" content="@img/banner.jpg" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<!-- X (Twitter) -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<!-- змінити на реальну силку сайту -->
+	<meta property="twitter:url" content="https://effulgent-cupcake-ced8c4.netlify.app/" />
+	<meta property="twitter:title" content="Ekstrim Kvadro Slavsko" />
+	<meta property="twitter:description"
+		content="[[description]]" />
+	<meta property="twitter:image" content="@img/banner.jpg" />
 	<title>[[title]]</title>
 </head>
