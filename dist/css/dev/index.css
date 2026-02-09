@@ -921,6 +921,9 @@ body {
   display: grid;
 }
 .reviews__items {
+  grid-auto-rows: 1fr;
+}
+.reviews__items {
   opacity: 0;
   translate: 0 2.1875rem;
 }
@@ -936,6 +939,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 295/312;
 }
 .item-review__body {
   background-color: #e8e8e8;
@@ -1706,6 +1710,22 @@ body::after {
   background-color: #333;
   margin-top: 0.5rem;
 }
+@media (width <= 76.875em){
+  .reviews__items {
+    margin-inline: -0.9375rem;
+  }
+}
+@media (max-width: 76.875em){
+  .reviews__item:not(:has(.item-review__body)) {
+    display: none;
+  }
+  .item-review__body {
+    flex-shrink: 1;
+  }
+  .item-review__title:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
 @media (max-width: 71.25em){
   .footer__container {
     flex-wrap: wrap;
@@ -1746,17 +1766,8 @@ body::after {
   .item-driving__title {
     font-size: 1.375rem;
   }
-  .reviews__item:not(:has(.item-review__body)) {
-    display: none;
-  }
   .item-review__img {
     flex-basis: 12.5rem;
-  }
-  .item-review__body {
-    flex-shrink: 1;
-  }
-  .item-review__title:not(:last-child) {
-    margin-bottom: 0.625rem;
   }
   .join__text {
     margin-bottom: 1.75rem;
@@ -2074,7 +2085,7 @@ body::after {
 }
 @media (max-width: 31.24875em){
   .item-review__body {
-    padding: 0.9375rem 1.25rem;
+    padding: 1rem;
   }
 }
 @media (max-width: 29.99875em){
@@ -2122,6 +2133,9 @@ body::after {
   }
   .list-route__item {
     font-size: 0.875rem;
+  }
+  .item-review__img img {
+    aspect-ratio: 165/268;
   }
   .item-review__img {
     flex: 0 0 10.3125rem;
@@ -2194,19 +2208,14 @@ body::after {
   .routes__actions .swiper-scrollbar {
     flex: 0 1 71.5625rem;
   }
+  .item-review__body {
+    flex: 1 0 18.4375rem;
+  }
   .form {
     grid-template-columns: repeat(2, 1fr);
   }
   .form__button {
     grid-column: span 2;
-  }
-}
-@media (min-width: 31.25em){
-  .item-review__img {
-    flex: 0 1 18.4375rem;
-  }
-  .item-review__body {
-    flex: 1 0 18.4375rem;
   }
 }
 @media (min-width: 36em){
@@ -2332,25 +2341,10 @@ body::after {
     flex-basis: 34.5625rem;
   }
   .reviews__items {
-    grid-template-columns: 0.79fr repeat(2, 0.21fr) 0.79fr;
-  }
-  .reviews__item:nth-child(5n+1), .reviews__item:nth-child(5n+2) {
-    grid-column: span 2;
-  }
-  .reviews__item:nth-child(5n+4) {
-    grid-column: span 2;
-  }
-  .reviews__item:nth-child(5n+4) .item-review__img {
-    flex-grow: 1;
-  }
-  .reviews__item:nth-child(5n+1), .reviews__item:nth-child(5n+5) {
-    flex-direction: row-reverse;
-  }
-  .item-review {
-    column-gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
   .item-review__img {
-    max-height: 19.5rem;
+    flex: 0 1 18.4375rem;
   }
   .menu__list {
     display: flex;
@@ -2375,6 +2369,39 @@ body::after {
 @media (min-width: 75.0625em){
   .form-find {
     grid-template-columns: repeat(3, minmax(auto, 1fr)) minmax(auto, 25rem);
+  }
+}
+@media (width > 76.875em) and (width <= 96.0625em){
+  .reviews__items {
+    margin-inline: clamp( -9.375rem , 32.8674674267125rem  +  -43.9739413681vw , -0.9375rem );
+  }
+}
+@media (min-width: 76.9375em) and (min-width: 76.9375em){
+  .reviews__item:nth-child(5n+1) {
+    margin-left: 0.75rem;
+  }
+  .reviews__item:nth-child(5n+2) {
+    margin-right: 0.75rem;
+  }
+}
+@media (min-width: 76.9375em){
+  .reviews__items {
+    grid-template-columns: 0.79fr repeat(2, 0.185fr) 0.79fr;
+  }
+  .reviews__item:nth-child(5n+1), .reviews__item:nth-child(5n+2) {
+    grid-column: span 2;
+  }
+  .reviews__item:nth-child(5n+4) {
+    grid-column: span 2;
+  }
+  .reviews__item:nth-child(5n+4) .item-review__img {
+    flex-grow: 1;
+  }
+  .reviews__item:nth-child(5n+1), .reviews__item:nth-child(5n+5) {
+    flex-direction: row-reverse;
+  }
+  .item-review {
+    column-gap: 0.5rem;
   }
 }
 @media (width > 79.375em){
@@ -2407,6 +2434,11 @@ body::after {
   }
   .footer__container {
     column-gap: 3.5rem;
+  }
+}
+@media (width > 96.0625em){
+  .reviews__items {
+    margin-inline: -9.375rem;
   }
 }
 @media (any-hover: hover), (pointer: fine){

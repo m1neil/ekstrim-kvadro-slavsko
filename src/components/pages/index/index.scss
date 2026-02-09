@@ -1135,7 +1135,7 @@
 	&__items {
 		gap: 8px;
 		display: grid;
-		@include adaptiveValue("margin-inline", -150, -15, 2, 1537, 1230);
+		@include adaptiveValue("margin-inline", -150, -15, 0, 1537, 1230);
 		grid-auto-rows: 1fr;
 		@media (min-width: toEm($tablet)) {
 			grid-template-columns: repeat(2, 1fr);
@@ -1206,10 +1206,10 @@
 				aspect-ratio: 165 / 268;
 			}
 		}
-		@media (min-width: toEm($mobileSmall)) {
+		@media (min-width: toEm($tablet)) {
 			flex: 0 1 295px;
 		}
-		@media (max-width: toEm(1230)) {
+		@media (max-width: toEm($tablet)) {
 			flex-basis: 200px;
 		}
 		@media (max-width: toEm($mobileSmall)) {
