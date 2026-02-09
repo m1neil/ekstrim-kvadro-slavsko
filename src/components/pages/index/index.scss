@@ -1115,8 +1115,8 @@
 .reviews {
 	padding-bottom: 50px;
 	@include adaptiveValue("padding-top", 70, 40);
-	// .reviews__content
-	&__content {
+	// .reviews__container
+	&__container {
 	}
 	// .reviews__title
 	&__title {
@@ -1135,8 +1135,13 @@
 	&__items {
 		gap: 8px;
 		display: grid;
+		@include adaptiveValue("margin-inline", -150, -15, 2, 1537, 1230);
+		grid-auto-rows: 1fr;
 		@media (min-width: toEm($tablet)) {
-			grid-template-columns: 0.79fr repeat(2, 0.21fr) 0.79fr;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: toEm(1231)) {
+			grid-template-columns: 0.79fr repeat(2, 0.185fr) 0.79fr;
 		}
 		opacity: 0;
 		translate: 0 35px;
@@ -1150,10 +1155,19 @@
 	}
 	// .reviews__item
 	&__item {
-		@media (min-width: toEm($tablet)) {
+		@media (min-width: toEm(1231)) {
 			&:nth-child(5n + 1),
 			&:nth-child(5n + 2) {
 				grid-column: span 2;
+			}
+
+			@media (min-width: toEm(1231)) {
+				&:nth-child(5n + 1) {
+					margin-left: 12px;
+				}
+				&:nth-child(5n + 2) {
+					margin-right: 12px;
+				}
 			}
 
 			&:nth-child(5n + 4) {
@@ -1168,7 +1182,7 @@
 				flex-direction: row-reverse;
 			}
 		}
-		@media (max-width: toEm($tablet)) {
+		@media (max-width: toEm(1230)) {
 			&:not(:has(.item-review__body)) {
 				display: none;
 			}
@@ -1178,7 +1192,7 @@
 
 .item-review {
 	display: flex;
-	@media (min-width: toEm($tablet)) {
+	@media (min-width: toEm(1231)) {
 		column-gap: 8px;
 	}
 	// .item-review__img
@@ -1187,14 +1201,15 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			aspect-ratio: 295 / 312;
+			@media (max-width: toEm($mobileSmall)) {
+				aspect-ratio: 165 / 268;
+			}
 		}
-		@media (min-width: toEm(500)) {
+		@media (min-width: toEm($mobileSmall)) {
 			flex: 0 1 295px;
 		}
-		@media (min-width: toEm($tablet)) {
-			max-height: 312px;
-		}
-		@media (max-width: toEm($tablet)) {
+		@media (max-width: toEm(1230)) {
 			flex-basis: 200px;
 		}
 		@media (max-width: toEm($mobileSmall)) {
@@ -1208,17 +1223,17 @@
 	&__body {
 		background-color: #e8e8e8;
 		padding: 32px 24px;
-		@media (min-width: toEm(500)) {
+		@media (min-width: toEm($mobileSmall)) {
 			flex: 1 0 295px;
 		}
-		@media (max-width: toEm($tablet)) {
+		@media (max-width: toEm(1230)) {
 			flex-shrink: 1;
 		}
 		@media (max-width: toEm($mobile)) {
 			padding: 24px 15px;
 		}
 		@media (max-width: toEm(499.98)) {
-			padding: 15px 20px;
+			padding: 16px;
 		}
 	}
 	// .item-review__title
@@ -1230,7 +1245,7 @@
 		color: $accentColor;
 		&:not(:last-child) {
 			margin-bottom: 16px;
-			@media (max-width: toEm($tablet)) {
+			@media (max-width: toEm(1230)) {
 				margin-bottom: 10px;
 			}
 			@media (max-width: toEm($mobile)) {

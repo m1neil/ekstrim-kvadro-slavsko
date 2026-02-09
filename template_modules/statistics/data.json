@@ -70,7 +70,13 @@
       {
         "date": "09.02.2026",
         "start": 1770625067025,
-        "end": 1770625067025
+        "end": 1770627835497,
+        "type": "build"
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770629185940,
+        "end": 1770629185940
       }
     ],
     "files": [
@@ -94,7 +100,8 @@
       "iconfont.html",
       "index.php",
       "form.js",
-      "menu.html"
+      "menu.html",
+      "route-04.jpg"
     ]
   }
 }

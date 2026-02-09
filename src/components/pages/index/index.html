@@ -78,15 +78,15 @@
 	<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="index__find find">
 		<div class="find__container">
 			<div class="find__body">
-				<form data-fls-select-one data-fls-form="ajax" method="POST" action="php/telegram/index.php"
+				<form data-fls-select-one data-fls-form="ajax" method="POST" action="#"
 					class="find__form form-find">
 					<div class="form-find__column">
 						<label for="#" class="form-find__label">Оберіть складність</label>
 						<select name="complexity" data-fls-select data-fls-select-modif="form-find__select">
 							<option value="Легка">Легка</option>
 							<option value="Середня" selected>Середня</option>
-							<option value="Важка">Важка</option>
-							<option value="Неможлива">Неможлива</option>
+							<option value="Середньо важка">Середньо важка</option>
+							<option value="Важка">Складна</option>
 						</select>
 					</div>
 					<div class="form-find__column">
@@ -96,6 +96,8 @@
 							<option value="Від 2 годин" selected>Від 2 годин</option>
 							<option value="Від 3 годин">Від 3 годин</option>
 							<option value="Від 4 годин">Від 4 годин</option>
+							<option value="5-6 годин">5-6 годин</option>
+							<option value="5-6 годин">Денна подорож</option>
 						</select>
 					</div>
 					<div class="form-find__column">
@@ -235,19 +237,19 @@
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-02.jpg" alt="image route 01">
+									<img src="@img/routes/route-02.jpg" alt="image route 02">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">2 година</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Середній</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
@@ -271,7 +273,7 @@
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-03.jpg" alt="image route 01">
+									<img src="@img/routes/route-03.jpg" alt="image route 03">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
@@ -283,7 +285,7 @@
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Середній</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
@@ -297,35 +299,35 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 4</div>
+							<h3 class="card-route__title title">Гора Зазар Беркут</h3>
+							<div class="card-route__detail">+ гірська карусель </div>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									В маршрут входить три зупинки для фото їзда гірськими хребтами з гарними краєвидами та можливість покататися на
+									гірській каруселі.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-01.jpg" alt="image route 01">
+									<img src="@img/routes/route-04.jpg" alt="image route 04">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">2 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Середній</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -334,35 +336,34 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
+							<div class="card-route__label">Маршрут 5</div>
+							<h3 class="card-route__title title">Круговий маршрут</h3>
 							<div class="card-route__detail">+ лісовий маршрут </div>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Цікавий маршрут проходить по кордоні двох областей більш драйвовий маршрут з болотом та гірською річкою.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-02.jpg" alt="image route 01">
+									<img src="@img/routes/route-05.jpg" alt="image route 05">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">2 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Складний</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -371,35 +372,33 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 6</div>
+							<h3 class="card-route__title title">Озеро Віта</h3>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Цікавий маршрут з заїздом на озеро Віта.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-03.jpg" alt="image route 01">
+									<img src="@img/routes/route-06.jpg" alt="image route 06">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">2 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Середній</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -408,35 +407,34 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 7</div>
+							<h3 class="card-route__title title">Озеро віта</h3>
+							<div class="card-route__detail">+ круговий маршрут</div>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Поєднує в собі легкість драйв болотом річкою та складність проходження.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-01.jpg" alt="image route 01">
+									<img src="@img/routes/route-07.jpg" alt="image route 07">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">3 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Середньо-важкий</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -445,35 +443,33 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 8</div>
+							<h3 class="card-route__title title">Маршрут на три області</h3>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Маршрут з гарними краєвидами їзда полонинами драйвовий та сподобається кожному.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-02.jpg" alt="image route 01">
+									<img src="@img/routes/route-08.jpg" alt="image route 08">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">3 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Складний</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -482,35 +478,34 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 9</div>
+							<h3 class="card-route__title title">Водоспад Шипіт</h3>
+							<div class="card-route__detail">та озеро Віта</div>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Цікавий маршрут гірськими дорогами з заїздами в цікаві місця та зупинки для фото.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-03.jpg" alt="image route 01">
+									<img src="@img/routes/route-09.jpg" alt="image route 09">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">4 години</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Складний</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -519,35 +514,69 @@
 					</div>
 					<div class="routes__slide swiper-slide">
 						<article class="card-route">
-							<div class="card-route__label">Маршрут 2</div>
-							<h3 class="card-route__title title">Гора Ільза </h3>
-							<div class="card-route__detail">+ лісовий маршрут </div>
+							<div class="card-route__label">Маршрут 10</div>
+							<h3 class="card-route__title title">Озеро віта</h3>
+							<div class="card-route__detail">+ водоспад Шипіт та гора Гимба</div>
 							<div class="card-route__text">
 								<p>
-									Маршрут для тих кому не вистачає години катання і хочеться складнішого катання біля 20км гірським серпантином з
-									гарними краєвидами та ще плюс одна зупинка для фото.
+									Захоплюючий маршрут багато їзди горами максимально цікавий маршрут.
 								</p>
 							</div>
 							<div class="card-route__block">
 								<a href="#" class="card-route__img">
-									<img src="@img/routes/route-01.jpg" alt="image route 01">
+									<img src="@img/routes/route-10.jpg" alt="image route 10">
 								</a>
 								<div class="card-route__body">
 									<ul class="card-route__list list-route">
 										<li class="list-route__item">
 											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
 											<div class="list-route__label">Тривалість:</div>
-											<div class="list-route__value">1 година</div>
+											<div class="list-route__value">5-6 годин</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
 											<div class="list-route__label">Складність:</div>
-											<div class="list-route__value">Легкий</div>
+											<div class="list-route__value">Складний</div>
 										</li>
 										<li class="list-route__item">
 											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
 											<div class="list-route__label">Ціна:</div>
-											<div class="list-route__value">1500 грн</div>
+											<div class="list-route__value">2000 грн</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="routes__slide swiper-slide">
+						<article class="card-route">
+							<div class="card-route__label">Маршрут 11</div>
+							<h3 class="card-route__title title">Озеро Синевир</h3>
+							<div class="card-route__text">
+								<p>
+									Складний маршрут біля 80 км гірськими дорогами.
+								</p>
+							</div>
+							<div class="card-route__block">
+								<a href="#" class="card-route__img">
+									<img src="@img/routes/route-11.jpg" alt="image route 11">
+								</a>
+								<div class="card-route__body">
+									<ul class="card-route__list list-route">
+										<li class="list-route__item">
+											<img src="@img/icons/clock.svg" alt="icon clock" class="list-route__icon">
+											<div class="list-route__label">Тривалість:</div>
+											<div class="list-route__value">Денна подорож</div>
+										</li>
+										<li class="list-route__item">
+											<img src="@img/icons/lightning.svg" alt="icon lightning" class="list-route__icon">
+											<div class="list-route__label">Складність:</div>
+											<div class="list-route__value">Складний</div>
+										</li>
+										<li class="list-route__item">
+											<img src="@img/icons/wallet.svg" alt="icon wallet" class="list-route__icon">
+											<div class="list-route__label">Ціна:</div>
+											<div class="list-route__value">2000 грн</div>
 										</li>
 									</ul>
 								</div>
@@ -622,7 +651,7 @@
 		<img src="@img/decors/decor-trace.svg" alt="decor" aria-hidden="true" class="driving__decor">
 	</section>
 	<section data-fls-watcher data-fls-watcher-threshold="0.25" data-fls-watcher-once id="reviews" class="reviews">
-		<div class="reviews__content">
+		<div class="reviews__container">
 			<h2 class="reviews__title title">Відгуки</h2>
 			<div class="reviews__items">
 				<article class="reviews__item item-review">
@@ -676,10 +705,10 @@
 						<img src="@img/reviews/review-05.jpg" alt="review">
 					</div>
 					<div class="item-review__body">
-						<h3 class="item-review__title">Збирались друзями — всі залишилися задоволені.</h3>
+						<h3 class="item-review__title">Подарував катання дівчині на день народження — влучив на 100%.</h3>
 						<div class="item-review__text">
 							<p>
-								Є і швидкі ділянки, і місця, де можна спокійно насолодитися природою. Гарне співвідношення ціни та вражень.
+								Інструктор уважний, постійно слідкував за групою. Атмосфера дуже дружня, без «конвеєра».
 							</p>
 						</div>
 					</div>
@@ -694,7 +723,7 @@
 					<h2 class="join__title title title--left">Готові до заїзду?</h2>
 					<div class="join__text">Заповніть форму нижче, а ми зв’яжемось з вами найближчим часом для узгодження
 						деталей.</div>
-					<form id="join-member" class="join__form form" data-fls-form="ajax" method="POST" action="php/telegram/index.php">
+					<form id="join-member" class="join__form form" data-fls-form="ajax" method="POST" action="#">
 						<div class="form__row">
 							<input data-fls-input required type="text" name="name" data-fls-form-errtext="Обов'язкове поле!"
 								placeholder="Ім'я"

@@ -83,7 +83,7 @@ function initSliders() {
 					slidesPerView: 1.7,
 				},
 				768: {
-					slidesPerView: 2.2,
+					slidesPerView: 2.1,
 				},
 				992: {
 					slidesPerView: 2.7,
