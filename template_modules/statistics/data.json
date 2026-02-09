@@ -40,6 +40,32 @@
         "start": 1770560153887,
         "end": 1770560175738,
         "type": "build"
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770616193996,
+        "end": 1770616193996
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770616614707,
+        "end": 1770616614707
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770618202288,
+        "end": 1770619538205,
+        "type": "build"
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770619582776,
+        "end": 1770619933910
+      },
+      {
+        "date": "09.02.2026",
+        "start": 1770619945309,
+        "end": 1770620111107
       }
     ],
     "files": [
@@ -56,7 +82,14 @@
       "menu.js",
       "header.html",
       "header.scss",
-      "scroll.scss"
+      "scroll.scss",
+      "iconfont.svg",
+      "iconfont.ttf",
+      "iconfont.woff2",
+      "iconfont.html",
+      "index.php",
+      "form.js",
+      "menu.html"
     ]
   }
 }

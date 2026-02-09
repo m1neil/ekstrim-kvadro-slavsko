@@ -75,31 +75,32 @@
 			</div>
 		</div>
 	</div> -->
-	<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once id="prices" class="index__find find">
+	<div data-fls-watcher data-fls-watcher-threshold="0.3" data-fls-watcher-once class="index__find find">
 		<div class="find__container">
 			<div class="find__body">
-				<form data-fls-select-one data-fls-form="dev" action="#" class="find__form form-find">
+				<form data-fls-select-one data-fls-form="ajax" method="POST" action="php/telegram/index.php"
+					class="find__form form-find">
 					<div class="form-find__column">
 						<label for="#" class="form-find__label">Оберіть складність</label>
-						<select name="form[]" data-fls-select data-fls-select-modif="form-find__select">
-							<option value="1">Легка</option>
-							<option value="2" selected>Середня</option>
-							<option value="3">Важка</option>
-							<option value="4">Неможлива</option>
+						<select name="complexity" data-fls-select data-fls-select-modif="form-find__select">
+							<option value="Легка">Легка</option>
+							<option value="Середня" selected>Середня</option>
+							<option value="Важка">Важка</option>
+							<option value="Неможлива">Неможлива</option>
 						</select>
 					</div>
 					<div class="form-find__column">
 						<label for="#" class="form-find__label">Тривалість</label>
-						<select name="form[]" data-fls-select data-fls-select-modif="form-find__select">
-							<option value="1">Від 1 години</option>
-							<option value="2" selected>Від 2 годин</option>
-							<option value="3">Від 3 годин</option>
-							<option value="4">Від 4 годин</option>
+						<select name="duration" data-fls-select data-fls-select-modif="form-find__select">
+							<option value="Від 1 години">Від 1 години</option>
+							<option value="Від 2 годин" selected>Від 2 годин</option>
+							<option value="Від 3 годин">Від 3 годин</option>
+							<option value="Від 4 годин">Від 4 годин</option>
 						</select>
 					</div>
 					<div class="form-find__column">
 						<label for="#" class="form-find__label">Телефон</label>
-						<input data-fls-input data-fls-phone required type="text" name="form[phone]"
+						<input data-fls-input data-fls-phone required type="text" name="phone"
 							placeholder="+380"
 							class="form-find__input">
 					</div>
@@ -693,14 +694,14 @@
 					<h2 class="join__title title title--left">Готові до заїзду?</h2>
 					<div class="join__text">Заповніть форму нижче, а ми зв’яжемось з вами найближчим часом для узгодження
 						деталей.</div>
-					<form id="join-member" class="join__form form" data-fls-form="dev" method="POST" action="#">
+					<form id="join-member" class="join__form form" data-fls-form="ajax" method="POST" action="php/telegram/index.php">
 						<div class="form__row">
-							<input data-fls-input required type="text" name="form[name]" data-fls-form-errtext="Обов'язкове поле!"
+							<input data-fls-input required type="text" name="name" data-fls-form-errtext="Обов'язкове поле!"
 								placeholder="Ім'я"
 								class="form__input input">
 						</div>
 						<div class="form__row">
-							<input data-fls-input data-fls-phone required type="text" name="form[phone]"
+							<input data-fls-input data-fls-phone required type="text" name="phone"
 								data-fls-form-errtext="Не вірно вказано телефон!"
 								placeholder="Телефон"
 								class="form__input input">

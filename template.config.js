@@ -95,7 +95,7 @@ export default {
 		vue: false,
 	},
 	php: {
-		enable: false,
+		enable: true,
 		base: './src/php/',
 		hostname: 'localhost',
 		port: '1110',

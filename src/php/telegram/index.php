@@ -10,10 +10,16 @@ if (trim($content)) {
 	// Your bot's token that got from @BotFather
 	$apiToken = "";
 	$data = [
-		// The user's(that you want to send a message) telegram chat id
-		'chat_id' => '',
+		// The user's(that you want to send a message) telegram chat id, example @EkstrimKvadroSlavskoGetMessage
+		'chat_id' => '@',
 		'text' => $content,
 		'parse_mode' => 'HTML'
 	];
-	$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data));
+	$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?".http_build_query($data));
 }
+
+echo json_encode([
+    'status'=>'ok'
+]);
+
+exit;
